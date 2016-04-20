@@ -1,0 +1,327 @@
+# This file defines the contenttypes on the website. See the documentation for
+# details: http://docs.bolt.cm/content#defining-contenttypes
+news:
+    name: News
+    singular_name: Newsitem 
+    fields:
+        title:
+            type: text
+            class: large
+        slug:
+            type: slug
+            uses: title
+        image:
+            type: image             
+        ogimage:
+            type: image             
+            label: "OG Image"
+            postfix: "<p>Use this to specify the image in the OG image tag.</p>"
+        text_markdown:
+            type: markdown
+            height: 400px  
+            allowtwig: true
+        introduction:
+            type: html
+            height: 300px  
+            allowtwig: true
+        text:
+            type: html
+            height: 300px  
+            allowtwig: true
+        seo:
+            type: seo
+            group: "SEO settings"
+    record_template: newsitem.twig
+    listing_template: news.twig
+    sort: -id
+
+ 
+features:
+    name: Features
+    singular_name: Feature
+    fields:
+        title:
+            type: text
+            class: large
+        slug:
+            type: slug
+            uses: title
+        frontpage:
+            type: checkbox
+            label: Tonen op homepage?
+        frontpageorder:
+            type: integer
+            label: Volgorde homepage
+            class: small
+        image:
+            type: image             
+        text:
+            type: html
+            height: 300px  
+    record_template: newsitem.twig
+    listing_template: features.twig
+    taxonomy: [ chapters ]
+    recordsperpage: 100
+    
+pages:
+    name: Pages
+    singular_name: Page
+    fields:
+        title:
+            type: text
+            class: large   
+        slug:
+            type: slug
+            uses: title                    
+        subtitle:
+            type: text
+        image:
+            type: image
+        body:
+            type: html
+            height: 300px
+            allowtwig: true
+        template:
+            label: Choose a template..
+            type: templateselect 
+            filter: '*.twig'   
+        seo:
+            type: seo
+            group: "SEO settings"
+    template: page.twig
+    sort: title
+    recordsperpage: 100
+
+
+slides:
+    name: Slides
+    singular_name: slide 
+    fields:
+        title:
+            type: text
+            class: large
+            label: naam slide
+        slug:
+            type: slug
+            uses: title
+        image:
+            type: image
+            label: screenshot desktop
+        imagemobile:
+            type: image
+            label: screenshot mobile          
+        body:
+            type: html
+            height: 300px
+            label: Lijst highlights per slide
+        sitelink:
+            type: text
+            class: large
+    taxonomy: [ slidechapters ]
+    record_template: newsitem.twig
+    listing_template: showcase.twig
+
+    
+showcases:
+    name: Showcases
+    singular_name: showcaseitem 
+    fields:
+        title:
+            type: text
+            class: large
+            group: basic
+        slug:
+            type: slug
+            uses: title
+        featured:
+            type: checkbox
+        description:
+            type: html
+            height: 300px
+        author:
+            type: text
+            class: large
+        image:
+            type: image
+        slider:
+            type: imagelist
+        sitelink:
+            type: text
+            class: large
+    taxonomy: [ tags ]
+    record_template: showcase_item.twig
+    listing_template: showcase.twig
+
+
+submitted_website:
+    name: Submitted Websites
+    singular_name: Submitted Website
+    fields:
+        title:
+            type: text
+            class: large
+            group: basic
+        slug:
+            type: slug
+            uses: title
+        sitelink:
+            type: text
+            class: large
+        description:
+            type: html
+            height: 300px
+        author:
+            type: text
+            class: large
+        email:
+            type: text
+            class: large
+    taxonomy: [ tags ]
+    default_status: draft
+    record_template: showcase.twig
+    listing_template: showroom.twig
+    viewless: true
+    searchable: false
+
+
+blocks:
+    name: Blocks
+    singular_name: block 
+    fields:
+        title:
+            type: text
+            class: large
+            label: titel
+        slug:
+            type: slug
+            uses: title
+        subtitle:
+            type: text
+        body:
+            type: html
+            height: 300px
+            label: Tekst
+        calltoaction:
+            type: text
+            label: Tekst op knop
+        sitelink:
+            type: text
+            label: Linkt naar
+    record_template: newsitem.twig
+    listing_template: showcase.twig
+ 
+# UITFASEREN!:
+homepage:
+    name: Homepage
+    singular_name: Home
+    fields:
+        title:
+            type: text
+            class: large
+        slug:
+            type: slug
+            uses: title
+        subtitle:
+            label: Ondertitel
+            type: text
+            class: wide
+        block1:
+            type: html
+            height: 150px
+        block2:
+            type: html
+            height: 150px
+        block3:
+            type: html
+            height: 150px
+    template: index.twig
+
+   
+
+# possible field types:
+# text - varchar(256) - input type text
+# number - double - input type text, useful for storing number that need to be sortable
+# templateselect - varchar(256) - select with template filenames
+# image - varchar(256) - image select/upload widget, stored as filename
+# file - varchar(256) - file select/upload widget, stored as filename
+# video - varchar(256) - Video embed widget, stored as filename
+# html - text (65kb) - wysiwyg element
+# textarea - varchar(32768) - < textarea >
+# datetime - datetime - date and time selector widget
+# date - datetime - date selector widget
+# divider - simple divider to enter a short text and/or line in the edit page.
+
+
+
+# ---------
+
+# OUDE CONTENTTYPES
+
+# show above older entries.
+
+# entries:
+#     name: Entries
+#     singular_name: Entry
+#     fields:
+#         title:
+#             type: text
+#             class: large
+#             group: basic
+#         slug:
+#             type: slug
+#             uses: title
+#             group: basic
+#         image:
+#             type: image
+#             group: media
+#             separator: true
+#         teaser:
+#             type: html
+#             height: 150px
+#             group: basic
+#         video:
+#             type: video
+#             group: media
+#         body:
+#             type: html
+#             height: 300px
+#             group: basic
+#     relations:
+#         pages:
+#           multiple: false
+#           order: title
+#           label: Select a page
+#     taxonomy: [ categories, tags ]
+#     record_template: entry.twig
+#     listing_template: listing.twig
+#     listing_records: 10
+#     default_status: publish
+#     sort: datepublish DESC
+#     recordsperpage: 10
+#     groups: [ basic, media ]
+
+
+
+# pages:
+#     name: Pages
+#     singular_name: Page
+#     fields:
+#         title:
+#             type: text
+#             class: large
+#         slug:
+#             type: slug
+#             uses: title
+#         image:
+#             type: image
+#         teaser:
+#             type: html
+#             height: 150px
+#         body:
+#             type: html
+#             height: 300px
+#         template:
+#             type: templateselect
+#             filter: '*.twig'
+#     taxonomy: [ chapters ]
+#     recordsperpage: 100

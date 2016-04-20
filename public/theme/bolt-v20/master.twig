@@ -1,0 +1,158 @@
+<!doctype html>
+<!--[if IE]><![endif]-->
+<!--[if IE 7]><html xml:lang="{{ htmllang() }}" lang="{{ htmllang() }}" class="ie ie7"><![endif]-->
+<!--[if IE 8]><html xml:lang="{{ htmllang() }}" lang="{{ htmllang() }}" class="ie ie8"><![endif]-->
+<!--[if (lt IE 7)|(gt IE 8)|!(IE)]><!-->
+<html xml:lang="en" lang="en">
+<!--<![endif]-->
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{ seo.title() }}</title>
+    {{ seo.metatags() }}
+
+    <meta name="DCTERMS.title" content="Bolt CMS"/>
+    <meta name="robots" content="noydir, noodp"/>
+
+    <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,600italic,400italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{{ paths.theme }}styles/bolt-v20.css" type="text/css" media="all" />
+
+    <link rel="shortcut icon" href="/app/view/img/favicon-bolt.ico">
+    <link rel="apple-touch-icon" sizes="76x76" href="/app/view/img/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/app/view/img/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/app/view/img/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/app/view/img/apple-touch-icon-180x180.png">
+
+
+    <meta property="og:site_name" content="{{ app.config.get('general/sitename') }}" />
+    <meta property="og:url" content="{{ paths.canonicalurl }}" />
+	{% if record.image is not empty %}
+    <meta property="og:image" content="https://bolt.cm/{{ record.image|thumbnail(1000, 1000) }}" />
+	{% elseif record.ogimage is not empty %}
+    <meta property="og:image" content="https://bolt.cm/{{ record.ogimage|thumbnail(1000, 1000) }}" />
+	{% endif %}
+
+    <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
+    <script src="//s3.amazonaws.com/nwapi/nwmatcher/nwmatcher-1.2.5-min.js"></script>
+    <script src="//html5base.googlecode.com/svn-history/r38/trunk/js/selectivizr-1.0.3b.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js"></script>
+    <![endif]-->
+
+    {% block header_extra_scripts %}
+    {% endblock %}
+</head>
+
+<body class="{%- block bodyclass -%}{%- endblock -%}">
+
+{% setcontent home = 'pages/homepage' %}
+    <header style="background-image: {% block coverimage %} url({{ thumbnail(home.image, 1900, 800,"c") }}) {% endblock %};">
+        <div class="inner">
+        {% block header %}
+
+            <nav class="meta-nav">
+                <ul>
+                    <li class="counter"><a href="https://github.com/bolt/bolt" title="octocat">
+                        <i class="fa fa-lg fa-github"></i><span id="stargazers">2400 Stars</span>
+                    </a></li>
+                    <li class="fork"><a href="https://github.com/bolt/bolt" title="To Bolt on GitHub">Fork Bolt on GitHub</a></li>
+                </ul>
+            </nav>
+
+            {% block logo %}<h1 id="logo"><a href="/"><img src="{{paths.theme}}images/bolt.png" width='245' alt="{{ app.config.get('general/sitename') }}" /></a></h1>{% endblock logo %}
+
+            <h2 class="payoff">{{ app.config.get('general/payoff') }}</h2>
+            <a class="button download" href="/pages/download">
+                <span class="desktop"><i class="fa fa-download"></i>Download Bolt</span><span class="mobile">View download options</span>
+                {% setcontent currentversion = 'blocks/version' %}
+                <span class="sub">{{ currentversion.title }}</span>
+            </a>
+            <a class="button trybolt" href="http://try.bolt.cm" title="Setup and start a Bolt-site within seconds on try.bolt.com!">
+                <i class="fa fa-hand-o-right"></i>Try Bolt now!
+            </a>
+
+            {% setcontent latestnews = 'news/latest/1' returnsingle %}
+            <a class="button latestnews" href="{{latestnews.link}}">
+                Latest news: {{latestnews.title|excerpt(50)}} &raquo;
+             </a>
+            <a class="menu-toggle"><span></span></a>
+        {% endblock header %}
+        </div>
+    </header>
+   <nav class="main-nav expanded">
+        <ul>
+            {{ menu('main', '_sub_menu.twig') }}
+        </ul>
+    </nav>
+
+    <main>
+    {% block content %}
+    If you see this, something is very, very wrong....
+    {% endblock content %}
+    <a class="topbutton" href="#"><i class="fa fa-hand-o-up  fa-2x"></i><br />Back to top</a>
+    </main>
+
+    <footer>
+        <div class="inner">
+            {% block footer %}
+            <nav class="bottomnav">
+                <ul>
+                {{ menu('main', '_sub_menu.twig') }}
+                </ul>
+            </nav>
+            <div class="credits">
+                <p>This site is built with Bolt</p>
+            </div>
+            <div class="socials">
+                <a class="tw" href="//twitter.com/boltcm"><i class="fa fa-lg fa-twitter"></i>Bolt on Twitter</a>
+                <a class="gh" href="//github.com/bolt/bolt"><i class="fa fa-lg fa-github"></i>Bolt on Github</a>
+            </div>
+            {% endblock footer %}
+        </div>
+    </footer>
+
+
+<script src="{{ paths.theme }}scripts/jquery-1.10.2.min.js"></script>
+<script src="{{ paths.theme }}scripts/jquery-plugins.js" type="text/javascript"></script>
+{% block footer_extra_scripts %}
+{% endblock %}
+<script src="{{ paths.theme }}scripts/bolt-v20.js" type="text/javascript"></script>
+
+{# <script src="{{ paths.theme }}scripts/foundation.min.js"></script>
+  <script>
+    $(document).foundation();
+  </script>
+#}
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-34977638-1']);
+  _gaq.push(['_setDomainName', 'bolt.cm']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<!-- Piwik -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//stats.bolt.cm/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', 1]);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p><img src="//stats.bolt.cm/piwik.php?idsite=1" style="border:0;" alt="" /></p></noscript>
+<!-- End Piwik Code -->
+
+</body>
+</html>

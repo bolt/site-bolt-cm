@@ -1,0 +1,48 @@
+{% extends "master.twig" %}
+
+{% block bodyclass %}body-features{% endblock %}
+
+{% block content %}
+
+{% set chapters = app.config.get('taxonomy/chapters/options') %}
+
+<nav class='jumpnav'>
+    <ul>
+        {% for cat, catname in chapters %}
+        <li><a href="#{{cat}}">For {{catname}}</a></li> <!-- AW - WORKING ON THIS -->
+        {% endfor %}
+    </ul>
+</nav>
+
+{% for cat, catname in chapters %}
+<section class="maininfo">
+    <div class="maincolumn">
+
+{% setcontent textblock='blocks/'~cat %}
+
+     <article class="row">
+            <h1 id="{{cat}}">For {{catname}}</h1>
+            <h2 class="subheader articlebody">{{textblock.body|striptags}}</h2>
+        </article>
+
+        {% setcontent features = 'features' where { 'chapters':cat }%}
+        <ul class="featurelist">
+            {% for item in features %}
+            <li>
+                {% if loop.index < 4 %}
+                <div class="imgcontainer"><img src="{{ thumbnail(item.image, 606, 400, 'r') }}" alt="{{ item.title }}" width="303" class="feature-img-{{ loop.index }}"/></div>
+                {% endif %}
+                <h3><i class="fa fa-bolt"></i>{{ item.title }}</h3>
+                {{ item.text }}
+            </li>
+            {% endfor %}
+        </ul>
+        <a href="/download" class="button">See all download options</a>
+    </div>
+</section>
+
+{% endfor%}
+
+
+{% endblock content %}
+
