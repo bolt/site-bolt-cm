@@ -1,11 +1,11 @@
 {
-  "name": "base-2014-dev",
-  "version": "1.0.0",
-  "homepage": "https://github.com/bolt/base-2014",
+  "name": "bolt-site",
+  "version": "3.0.0",
+  "homepage": "https://bolt.cm",
   "authors": [
     "bobdenotter <bob@twokings.nl>"
   ],
-  "description": "Base 2014 theme for Bolt",
+  "description": "Bolt.cm theme",
   "main": "index.twig",
   "keywords": [
     "twig",
@@ -21,7 +21,7 @@
     "tests"
   ],
   "dependencies": {
-    "foundation": "^5.5"
+    "foundation-sites": "~6.2"
   }
 }
 

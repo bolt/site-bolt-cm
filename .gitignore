@@ -4,3 +4,5 @@ public/thumbs/*
 app/database/boltsite.db
 public/adminer.php
 public/files/*
+bower_components/
+node_modules/
