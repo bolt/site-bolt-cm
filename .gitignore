@@ -1,3 +1,6 @@
 vendor
-app/cache
+app/cache/*
 public/thumbs/*
+app/database/boltsite.db
+public/adminer.php
+public/files/*
