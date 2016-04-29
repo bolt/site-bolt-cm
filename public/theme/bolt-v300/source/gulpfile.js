@@ -4,7 +4,7 @@ var $      = require('gulp-load-plugins')();
 // Define base paths for Sass and Javascript.
 var sassPaths = [
     'scss/',
-    'bower_components/foundation-sites/scss',
+    'bower_components/foundation/scss',
     // 'bower_components/motion-ui/src',
     // 'bower_components/slicknav/scss',
     // 'bower_components/highlightjs/styles'
@@ -16,7 +16,7 @@ var javascriptFiles = [
 
 // Set up 'sass' task.
 gulp.task('sass', function() {
-  return gulp.src('scss/docs.scss')
+  return gulp.src('scss/bolt-v20.scss')
     .pipe($.sass({
       includePaths: sassPaths,
       outputStyle: 'nested' // 'compressed' or 'nested'
