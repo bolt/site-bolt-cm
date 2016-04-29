@@ -1,0 +1,67 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "778b2b542488db1f2f7c6d645c890089",
+    "content-hash": "0a257c267381469e263b18273c3fdf61",
+    "packages": [
+        {
+            "name": "bolt/disqus",
+            "version": "v2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bolt/Disqus.git",
+                "reference": "91e94d63ffa35869e2e3505d80ef0de85bd5028e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bolt/Disqus/zipball/91e94d63ffa35869e2e3505d80ef0de85bd5028e",
+                "reference": "91e94d63ffa35869e2e3505d80ef0de85bd5028e",
+                "shasum": ""
+            },
+            "require": {
+                "bolt/bolt": "^3.0"
+            },
+            "type": "bolt-extension",
+            "extra": {
+                "bolt-icon": "web/disqus.png",
+                "bolt-assets": "web",
+                "bolt-class": "Bolt\\Extension\\Bolt\\Disqus\\DisqusExtension"
+            },
+            "autoload": {
+                "psr-4": {
+                    "Bolt\\Extension\\Bolt\\Disqus\\": "src"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bob den Otter",
+                    "email": "bob@twokings.nl"
+                }
+            ],
+            "description": "The 'Disqus' extension inserts a Disqus comment thread in your templates.",
+            "keywords": [
+                "comments",
+                "disqus"
+            ],
+            "support": {
+                "source": "https://github.com/bolt/Disqus/tree/v2.0.0",
+                "issues": "https://github.com/bolt/Disqus/issues"
+            },
+            "time": "2016-03-30 14:48:29"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": true,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}
