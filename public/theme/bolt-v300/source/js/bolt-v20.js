@@ -1,5 +1,8 @@
 jQuery(function($) {
 
+    hljs.initHighlightingOnLoad();
+
+
     // HIDING MOBILE NAVIGATION
     $('.main-nav').removeClass('expanded');
     // and toggling it again with a button
