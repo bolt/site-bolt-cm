@@ -3,6 +3,7 @@
 @import 'foundation';
 @import 'font-awesome';
 @import 'magnific-popup';
+@import 'tomorrow-night';
 
 
 
@@ -617,7 +618,7 @@ section.logos {
     }
     .slideimg {
         @extend .column;
-        @extend .medium-center;
+        // @extend .medium-center;
         @extend .large-8;
         text-align: center;
     }
@@ -689,7 +690,7 @@ footer {
     .credits {
         @extend .columns;
         @extend .medium-6;
-       
+
     }
     .socials {
         @extend .columns;
@@ -885,11 +886,11 @@ section.showcases {
     -webkit-transition-duration: 1s; /* Safari */
     transition-duration: 1s;
     cursor: pointer;
-    
-    user-drag: none; 
+
+    user-drag: none;
     -moz-user-select: none;
     -webkit-user-drag: none;
-    
+
     border: solid #CFCFCF 1px;
 }
 
@@ -964,19 +965,19 @@ section.showcases {
     @media #{$large-up}{
     width: 24%;
     }
-} 
+}
 
 .grid-item h3{
     font-size: 22px;
 }
-.grid-sizer {     
+.grid-sizer {
     width: 100%;
     @media #{$medium-up}{
     width: 48%;
     }
     @media #{$large-up}{
     width: 24%;
-    } 
+    }
 }
 
 .grid-item a img{border-radius: 3px 3px 0 0;}

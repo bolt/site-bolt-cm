@@ -15,7 +15,12 @@
         <article class="row">
             <h1><a href="{{record.link}}">{{record.title}}</a></h1>
             {# <h2 class="subheader">{{record.subtitle}}</h2> #}
-            {% if news %}<p class="meta" title="{{ record.datepublish|date("j F Y - H:i") }}">Published: {{ record.datepublish|date("l j F Y") }} by <a href="{{ profile_link(record.user) }}">{{ record.user.displayname }}</a></p>{% endif %}
+            {% if news %}
+                <p class="meta" title="{{ record.datepublish|date("j F Y - H:i") }}">Published: {{ record.datepublish|date("l j F Y") }} by
+                    {# <a href="{{ profile_link(record.user) }}">{{ record.user.displayname }}</a> #}
+                    {{ record.user.displayname }}
+                </p>
+            {% endif %}
             <div class="articlebody">
                 {% if record.image %}
                 <a href="{{ record.image|image() }}" class="magnific">
@@ -78,6 +83,7 @@
                                 font-size: 14px;
                             }
                         </style>
+                        {#
                         <div class="user-info">
                             <img class="avatar" src="{{ avatar(record.user, 100) }}">
                             <div class="info">
@@ -85,6 +91,7 @@
                                 <p>{{ record.user.description|raw|nl2br }}</p>
                             </div>
                         </div>
+                        #}
                     {% endif %}
 
                     <div class="disqus">
