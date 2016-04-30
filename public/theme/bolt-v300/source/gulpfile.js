@@ -20,19 +20,16 @@ var javascriptFiles = [
 
 // Set up 'sass' task.
 gulp.task('sass', function() {
-
-  var minifycss = $.if(isProduction, $.minifyCss());
-
   return gulp.src('scss/bolt.scss')
+    .pipe($.sourcemaps.init())
     .pipe($.sass({
-      includePaths: sassPaths,
-      outputStyle: 'nested' // 'compressed' or 'nested'
+      includePaths: sassPaths
     })
       .on('error', $.sass.logError))
     .pipe($.autoprefixer({
       browsers: ['last 2 versions', 'ie >= 9']
     }))
-    .pipe(minifycss)
+    .pipe($.if(isProduction, $.minifyCss()))
     .pipe($.if(!isProduction, $.sourcemaps.write()))
     .pipe(gulp.dest('../styles'));
 });
@@ -40,12 +37,9 @@ gulp.task('sass', function() {
 
 // Set up 'compress' task.
 gulp.task('compress', function() {
-
-  var uglifyjs = $.if(isProduction, $.uglify());
-
   return gulp.src('js/*.js')
     .pipe($.concat('site.js'))
-    .pipe(uglifyjs)
+    .pipe($.if(isProduction, $.uglify()))
     .pipe(gulp.dest('../js'));
 });
 
@@ -62,5 +56,5 @@ gulp.task('build', ['sass', 'copyjavascript', 'compress']);
 // Set up 'default' task, with watches.
 gulp.task('default', ['sass', 'copyjavascript', 'compress'], function() {
   gulp.watch(['scss/**/*.scss'], ['sass']);
-  gulp.watch(['javascript/**/*.js'], ['compress']);
+  gulp.watch(['js/**/*.js'], ['compress']);
 });
