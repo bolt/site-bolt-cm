@@ -13,8 +13,7 @@
             <h2 class="subheader">{{item.subtitle}}</h2>
             <p class="meta" title="{{ item.datepublish|date("j F Y - H:i") }}">
                 Published: {{ item.datepublish|date("l j F Y") }} by
-                {# <a href="{{ profile_link(record.user) }}">{{ item.user.displayname }}</a> #}
-                {{ item.user.displayname }}
+                <a href="{{ profile_link(record.user) }}">{{ item.user.displayname }}</a>
             </p>
             <div class="articlebody">
                 {% if item.image %}
