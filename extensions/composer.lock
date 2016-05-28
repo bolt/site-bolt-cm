@@ -4,9 +4,103 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "778b2b542488db1f2f7c6d645c890089",
-    "content-hash": "0a257c267381469e263b18273c3fdf61",
+    "hash": "ea8de6387a96b1e01326b0f8f5dd2ea1",
+    "content-hash": "b4f66802cd0213e5f3a696bcd004d06b",
     "packages": [
+        {
+            "name": "bobdenotter/seo",
+            "version": "v0.10.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bobdenotter/seo.git",
+                "reference": "f94ec0f8c80bc8c68a7304df60dc570ab24f94e0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bobdenotter/seo/zipball/f94ec0f8c80bc8c68a7304df60dc570ab24f94e0",
+                "reference": "f94ec0f8c80bc8c68a7304df60dc570ab24f94e0",
+                "shasum": ""
+            },
+            "require": {
+                "bolt/bolt": "^3.0"
+            },
+            "type": "bolt-extension",
+            "extra": {
+                "bolt-assets": "web",
+                "bolt-class": "Bolt\\Extension\\BobdenOtter\\Seo\\SeoExtension"
+            },
+            "autoload": {
+                "psr-4": {
+                    "Bolt\\Extension\\BobdenOtter\\Seo\\": "src"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bob den Otter",
+                    "email": "bob@twokings.nl"
+                }
+            ],
+            "description": "An extension to easily manage SEO title, meta description and OG tags.",
+            "support": {
+                "source": "https://github.com/bobdenotter/seo/tree/v0.10.0",
+                "issues": "https://github.com/bobdenotter/seo/issues"
+            },
+            "time": "2016-04-30 14:12:44"
+        },
+        {
+            "name": "bobdenotter/tweet-embed",
+            "version": "v1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bobdenotter/bolt-tweet-embed.git",
+                "reference": "985e926ddf2f9d31429c422dc3ee597d60aee41b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bobdenotter/bolt-tweet-embed/zipball/985e926ddf2f9d31429c422dc3ee597d60aee41b",
+                "reference": "985e926ddf2f9d31429c422dc3ee597d60aee41b",
+                "shasum": ""
+            },
+            "require": {
+                "bolt/bolt": "^3.0"
+            },
+            "replace": {
+                "bobdenotter/bolt-tweet-embed": "*"
+            },
+            "type": "bolt-extension",
+            "extra": {
+                "bolt-assets": "web",
+                "bolt-class": "Bolt\\Extension\\Bobdenotter\\TweetEmbed\\TweetEmbedExtension"
+            },
+            "autoload": {
+                "psr-4": {
+                    "Bolt\\Extension\\Bobdenotter\\TweetEmbed\\": "src"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bob den Otter",
+                    "email": "bob@twokings.nl"
+                }
+            ],
+            "description": "A simple extension to embed tweets from Twitter in your website.",
+            "keywords": [
+                "embed",
+                "tweet",
+                "twitter"
+            ],
+            "support": {
+                "source": "https://github.com/bobdenotter/bolt-tweet-embed/tree/master",
+                "issues": "https://github.com/bobdenotter/bolt-tweet-embed/issues"
+            },
+            "time": "2016-04-26 08:14:41"
+        },
         {
             "name": "bolt/disqus",
             "version": "v2.0.0",
