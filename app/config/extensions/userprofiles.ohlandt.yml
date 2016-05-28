@@ -1,5 +1,5 @@
 # Which fields do you need?
-# Currently supported types: text, textarea
+# Currently supported types: text, textarea, checkbox, select (just values or key,value)
 fields:
   avatar:
     type: text
@@ -32,15 +32,15 @@ profiles:
   # Template to use for the profiles. You can build it in your normal theme folder.
   template: profile.twig
 
-    permissions:
-      # The user has to have at least one of this roles to have a public profile.
-      roles: [ editor, chief-editor ]
+  permissions:
+    # The user has to have at least one of this roles to have a public profile.
+    roles: [ editor, chief-editor ]
 
-      # Special users who shouldn't have a public profile.
-      excluded_usernames: [ ]
+    # Special users who shouldn't have a public profile.
+    excluded_usernames: [ ]
 
-      # A field on the user object which holds either a true'ish or false'ish value to determine
-      # if the user should have a public profile or not.
-      # Example: Create a checkbox field to let the user decide if he wants to have a public profile.
-      conditional_field: null
+    # A field on the user object which holds either a true'ish or false'ish value to determine
+    # if the user should have a public profile or not.
+    # Example: Create a checkbox field to let the user decide if he wants to have a public profile.
+    conditional_field: null
 
