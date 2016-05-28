@@ -18,7 +18,7 @@
     "name": "bolt/extensions",
     "prefer-stable": true,
     "provide": {
-        "bolt/bolt": "3.0.0"
+        "bolt/bolt": "3.0.3"
     },
     "repositories": {
         "packagist": false,
@@ -27,12 +27,12 @@
             "url": "https://extensions.bolt.cm/satis/"
         }
     },
+    "require": {
+        "bolt/disqus": "v2.0.0"
+    },
     "scripts": {
         "post-autoload-dump": "Bolt\\Composer\\EventListener\\PackageEventListener::dump",
         "post-package-install": "Bolt\\Composer\\EventListener\\PackageEventListener::handle",
         "post-package-update": "Bolt\\Composer\\EventListener\\PackageEventListener::handle"
-    },
-    "require": {
-        "bolt/disqus": "v2.0.0"
     }
 }
