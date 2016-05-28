@@ -28,7 +28,9 @@
         }
     },
     "require": {
-        "bolt/disqus": "v2.0.0"
+        "bolt/disqus": "v2.0.0",
+        "bobdenotter/seo": "v0.10.0",
+        "bobdenotter/tweet-embed": "v1.0.2"
     },
     "scripts": {
         "post-autoload-dump": "Bolt\\Composer\\EventListener\\PackageEventListener::dump",
