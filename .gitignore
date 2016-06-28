@@ -1,9 +1,11 @@
-vendor
 app/cache/*
-public/thumbs/*
 app/database/boltsite.db
 public/adminer.php
+public/bolt-public/view/
 public/files/*
 public/thumbs/*
+vendor
+
 bower_components/
 node_modules/
+
