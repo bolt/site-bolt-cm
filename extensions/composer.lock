@@ -9,16 +9,16 @@
     "packages": [
         {
             "name": "bobdenotter/seo",
-            "version": "v0.10.0",
+            "version": "v0.10.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bobdenotter/seo.git",
-                "reference": "f94ec0f8c80bc8c68a7304df60dc570ab24f94e0"
+                "reference": "5f8288aa7d44dd55b448e8ac92ec2bb25e6175fd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bobdenotter/seo/zipball/f94ec0f8c80bc8c68a7304df60dc570ab24f94e0",
-                "reference": "f94ec0f8c80bc8c68a7304df60dc570ab24f94e0",
+                "url": "https://api.github.com/repos/bobdenotter/seo/zipball/5f8288aa7d44dd55b448e8ac92ec2bb25e6175fd",
+                "reference": "5f8288aa7d44dd55b448e8ac92ec2bb25e6175fd",
                 "shasum": ""
             },
             "require": {
@@ -45,10 +45,10 @@
             ],
             "description": "An extension to easily manage SEO title, meta description and OG tags.",
             "support": {
-                "source": "https://github.com/bobdenotter/seo/tree/v0.10.0",
+                "source": "https://github.com/bobdenotter/seo/tree/v0.10.1",
                 "issues": "https://github.com/bobdenotter/seo/issues"
             },
-            "time": "2016-04-30 14:12:44"
+            "time": "2016-05-28 12:21:41"
         },
         {
             "name": "bobdenotter/tweet-embed",
@@ -175,16 +175,16 @@
         },
         {
             "name": "bolt/disqus",
-            "version": "v2.0.0",
+            "version": "v2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bolt/Disqus.git",
-                "reference": "91e94d63ffa35869e2e3505d80ef0de85bd5028e"
+                "reference": "fbf6e5cd43451a9ed161d66ffcf54558025a13c4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bolt/Disqus/zipball/91e94d63ffa35869e2e3505d80ef0de85bd5028e",
-                "reference": "91e94d63ffa35869e2e3505d80ef0de85bd5028e",
+                "url": "https://api.github.com/repos/bolt/Disqus/zipball/fbf6e5cd43451a9ed161d66ffcf54558025a13c4",
+                "reference": "fbf6e5cd43451a9ed161d66ffcf54558025a13c4",
                 "shasum": ""
             },
             "require": {
@@ -216,10 +216,10 @@
                 "disqus"
             ],
             "support": {
-                "source": "https://github.com/bolt/Disqus/tree/v2.0.0",
+                "source": "https://github.com/bolt/Disqus/tree/v2.0.1",
                 "issues": "https://github.com/bolt/Disqus/issues"
             },
-            "time": "2016-03-30 14:48:29"
+            "time": "2016-05-28 12:06:15"
         },
         {
             "name": "ohlandt/user-profiles",
