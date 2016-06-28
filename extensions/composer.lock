@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "e646ce86743e43550b3b2e10111101cb",
-    "content-hash": "4e07cba7ced277a1cc65598487a70f75",
+    "hash": "7d0bd76d1236c80139418383b4fb606d",
+    "content-hash": "0d11b23fcef3586534e57c4b99bd6753",
     "packages": [
         {
             "name": "bobdenotter/seo",
@@ -100,6 +100,78 @@
                 "issues": "https://github.com/bobdenotter/bolt-tweet-embed/issues"
             },
             "time": "2016-04-26 08:14:41"
+        },
+        {
+            "name": "bolt/boltforms",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bolt/boltforms.git",
+                "reference": "1d65eaf460be99b25d43e02d63467363d43b017a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bolt/boltforms/zipball/1d65eaf460be99b25d43e02d63467363d43b017a",
+                "reference": "1d65eaf460be99b25d43e02d63467363d43b017a",
+                "shasum": ""
+            },
+            "require": {
+                "bolt/bolt": "^3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.7"
+            },
+            "suggest": {
+                "rossriley/formeditor": "A UI editor for form configuration."
+            },
+            "type": "bolt-extension",
+            "extra": {
+                "bolt-assets": "web",
+                "bolt-class": "Bolt\\Extension\\Bolt\\BoltForms\\BoltFormsExtension",
+                "bolt-icon": "icon-boltforms.png",
+                "branch-alias": {
+                    "dev-master": "3.1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Bolt\\Extension\\Bolt\\BoltForms\\": [
+                        "src/"
+                    ],
+                    "ReCaptcha\\": "lib/ReCaptcha/"
+                },
+                "classmap": [
+                    "doc/example/"
+                ]
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Bolt\\Extension\\Bolt\\BoltForms\\Tests\\": "tests/",
+                    "Bolt\\Tests\\": "vendor/bolt/bolt/tests/phpunit/unit/"
+                }
+            },
+            "license": [
+                "GPL-3.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Gawain Lynch",
+                    "email": "gawain.lynch@gmail.com"
+                }
+            ],
+            "description": "Symfony Forms API for bolt",
+            "keywords": [
+                "comments",
+                "contact",
+                "forms",
+                "reCaptcha",
+                "uploads"
+            ],
+            "support": {
+                "source": "https://github.com/bolt/boltforms/tree/master",
+                "issues": "https://github.com/bolt/boltforms/issues"
+            },
+            "time": "2016-06-28 07:01:36"
         },
         {
             "name": "bolt/disqus",
@@ -210,7 +282,9 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "bolt/boltforms": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],
