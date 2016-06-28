@@ -34,11 +34,11 @@ csrf: true
 # BoltForms does a few things to help increase slightly the security of handling
 # file uploads.
 #
-# Firstly, the directory that you specify for "base_directory" below should NOT 
+# Firstly, the directory that you specify for "base_directory" below should NOT
 # be an route accessible to the outside world. We provide a special route should
-# you wish to make the files browsable after upload. 
-# 
-# Secondly, is the "filename_handling" parameter. If an attacker knows the 
+# you wish to make the files browsable after upload.
+#
+# Secondly, is the "filename_handling" parameter. If an attacker knows the
 # uploaded file name, this can make their job a bit easier. So we provide three
 # options, e.g. uploading the file kitten.jpg:
 #
@@ -49,7 +49,7 @@ csrf: true
 # | suffix  | kitten.jpg.Ze1d352rrI3p |
 # | keep    | kitten.jpg              |
 # -------------------------------------
-#  
+#
 # We recommend "suffix" as this is the most secure, alternatively "prefix" will
 # aid in file browsing. However "keep" should always be used with caution!
 #
@@ -68,8 +68,8 @@ uploads:
 # If enabled, ALL forms will go into debug mode.  However, when disabled an individual
 # form can still enable it's own debug — specific for and to that form
 debug:
-  enabled: true  
-  address: noreply@example.com
+  enabled: false
+  address: bolt@bolt.cm
 
 ## Example 1
 #
@@ -92,7 +92,7 @@ contact:
     attach_files: false
   feedback:
     success: Message submission sucessful
-    error: There are errors in the form, please fix before trying to resubmit 
+    error: There are errors in the form, please fix before trying to resubmit
 #  database:
 #    contenttype: mycontenttype  # ContentType record to create
 #    table: bolt_secret_table    # Specific database table to write to
@@ -131,6 +131,71 @@ contact:
     submit:
       type: submit
 
+
+showroom_submit:
+  notification:
+    enabled: false
+    debug: false
+    subject: Your message was submitted
+    from_name: author             # A field name, specified in the fields: section below
+    from_email: email             # A field name, specified in the fields: section below
+    replyto_name: author          # A field name, specified in the fields: section below
+    replyto_email: email          # A field name, specified in the fields: section below
+    to_name: Info                 # Must be valid text
+    to_email: info@bolt.cm        # Must be valid email address
+  feedback:
+    success: Message submission sucessful
+    error: There are errors in the form, please fix before trying to resubmit
+    redirect:
+      target: page/showcase
+  database:
+    contenttype: submitted_website
+  fields:
+    author:
+      type: text
+      options:
+        required: true
+        label: Name
+        attr:
+          placeholder: Your name …
+    status:
+      type: hidden
+      options:
+        required: false
+        label: false
+      data: 'draft'
+    title:
+      type: text
+      options:
+        required: true
+        label: Website name
+        attr:
+          placeholder: My Site …
+    sitelink:
+      type: text
+      options:
+        required: true
+        label: Website URL
+        attr:
+          placeholder: http://example.com
+    email:
+      type: email
+      options:
+        required: true
+        label: Email address
+        attr:
+          placeholder: you@example.com
+    description:
+      type: textarea
+      options:
+        required: true
+        label: Description
+        attr:
+          placeholder: Your message and website information
+    submit:
+      type: submit
+
+
 ## Example 2
 #
 # Example Showcase Form
@@ -138,7 +203,7 @@ contact:
 #  notification:
 #    enabled: true
 #    debug: false
-#    subject: "[TESTING] A showcase form was just submitted" 
+#    subject: "[TESTING] A showcase form was just submitted"
 #    from_name: name               # A field name, specified in the fields: section below
 #    replyto_email: email          # A field name, specified in the fields: section below
 #    replyto_name: name            # A field name, specified in the fields: section below
@@ -164,7 +229,7 @@ contact:
 #    contenttype: mycontenttype  # ContentType record to create
 #    table: bolt_secret_table    # Specific database table to write to
 #  uploads:
-#    subdirectory: showcase_files # The (optional) subdirectory for uploaded files 
+#    subdirectory: showcase_files # The (optional) subdirectory for uploaded files
 #  fields:
 #    subject:
 #      type: text
