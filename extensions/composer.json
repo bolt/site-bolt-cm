@@ -28,10 +28,10 @@
         }
     },
     "require": {
-        "bobdenotter/seo": "v0.10.0",
-        "bobdenotter/tweet-embed": "v1.0.2",
-        "bolt/disqus": "v2.0.0",
-        "ohlandt/user-profiles": "2.0.0"
+        "bolt/disqus": "^2.0",
+        "bobdenotter/seo": "^0.10.0",
+        "bobdenotter/tweet-embed": "^1.0",
+        "ohlandt/user-profiles": "^2.0"
     },
     "scripts": {
         "post-autoload-dump": "Bolt\\Composer\\EventListener\\PackageEventListener::dump",
