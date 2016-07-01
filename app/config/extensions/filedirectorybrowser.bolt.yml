@@ -1,0 +1,15 @@
+templates:
+    parent: distribution.twig
+
+## Load CSS for Font Awesome
+assets:
+    moment_js: true
+    font_awesome: true
+
+##
+## Routes to mounts controllers on and the directories they share
+##
+routes:
+    distribution:
+        mount: distribution
+        source: /var/www/sites/bolt.cm/distribution

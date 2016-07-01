@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "7d0bd76d1236c80139418383b4fb606d",
-    "content-hash": "0d11b23fcef3586534e57c4b99bd6753",
+    "hash": "a4369e0754e5541562aec391aff66705",
+    "content-hash": "14ecacc6761efff8dc169f1156ac019e",
     "packages": [
         {
             "name": "bobdenotter/seo",
@@ -222,6 +222,62 @@
             "time": "2016-05-28 12:06:15"
         },
         {
+            "name": "bolt/file-browser",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/GawainLynch/bolt-extension-file-browser.git",
+                "reference": "93028ad2ecf786283b780f1c13bd7851a1b9e38f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/GawainLynch/bolt-extension-file-browser/zipball/93028ad2ecf786283b780f1c13bd7851a1b9e38f",
+                "reference": "93028ad2ecf786283b780f1c13bd7851a1b9e38f",
+                "shasum": ""
+            },
+            "require": {
+                "bolt/bolt": "^3.0"
+            },
+            "type": "bolt-extension",
+            "extra": {
+                "bolt-assets": "web",
+                "bolt-class": "Bolt\\Extension\\Bolt\\FileDirectoryBrowser\\FileDirectoryBrowserExtension",
+                "branch-alias": {
+                    "dev-master": "3.0.x-dev"
+                },
+                "bolt-screenshots": [
+                    "screenshot-main.png",
+                    "screenshot-subdirectory.png"
+                ]
+            },
+            "autoload": {
+                "psr-4": {
+                    "Bolt\\Extension\\Bolt\\FileDirectoryBrowser\\": "src"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Gawain Lynch",
+                    "email": "gawain.lynch@gmail.com"
+                }
+            ],
+            "description": "File & directory browser",
+            "keywords": [
+                "browse",
+                "directories",
+                "download",
+                "files"
+            ],
+            "support": {
+                "source": "https://github.com/GawainLynch/bolt-extension-file-browser/tree/master",
+                "issues": "https://github.com/GawainLynch/bolt-extension-file-browser/issues"
+            },
+            "time": "2016-07-01 13:23:20"
+        },
+        {
             "name": "ohlandt/user-profiles",
             "version": "2.0.0",
             "source": {
@@ -283,7 +339,8 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "bolt/boltforms": 20
+        "bolt/boltforms": 20,
+        "bolt/file-browser": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
