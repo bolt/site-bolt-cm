@@ -2,31 +2,34 @@
 # details: http://docs.bolt.cm/content#defining-contenttypes
 news:
     name: News
-    singular_name: Newsitem 
+    singular_name: Newsitem
     fields:
         title:
             type: text
             class: large
+            group: Main
         slug:
             type: slug
             uses: title
         image:
-            type: image             
+            type: image
+            group: Images
         ogimage:
-            type: image             
+            type: image
             label: "OG Image"
             postfix: "<p>Use this to specify the image in the OG image tag.</p>"
         text_markdown:
             type: markdown
-            height: 400px  
+            height: 400px
             allowtwig: true
+            group: Content
         introduction:
             type: html
-            height: 300px  
+            height: 300px
             allowtwig: true
         text:
             type: html
-            height: 300px  
+            height: 300px
             allowtwig: true
         seo:
             type: seo
@@ -35,7 +38,7 @@ news:
     listing_template: news.twig
     sort: -id
 
- 
+
 features:
     name: Features
     singular_name: Feature
@@ -54,25 +57,25 @@ features:
             label: Volgorde homepage
             class: small
         image:
-            type: image             
+            type: image
         text:
             type: html
-            height: 300px  
+            height: 300px
     record_template: newsitem.twig
     listing_template: features.twig
     taxonomy: [ chapters ]
     recordsperpage: 100
-    
+
 pages:
     name: Pages
     singular_name: Page
     fields:
         title:
             type: text
-            class: large   
+            class: large
         slug:
             type: slug
-            uses: title                    
+            uses: title
         subtitle:
             type: text
         image:
@@ -83,8 +86,8 @@ pages:
             allowtwig: true
         template:
             label: Choose a template..
-            type: templateselect 
-            filter: '*.twig'   
+            type: templateselect
+            filter: '*.twig'
         seo:
             type: seo
             group: "SEO settings"
@@ -95,7 +98,7 @@ pages:
 
 slides:
     name: Slides
-    singular_name: slide 
+    singular_name: slide
     fields:
         title:
             type: text
@@ -109,7 +112,7 @@ slides:
             label: screenshot desktop
         imagemobile:
             type: image
-            label: screenshot mobile          
+            label: screenshot mobile
         body:
             type: html
             height: 300px
@@ -121,10 +124,10 @@ slides:
     record_template: newsitem.twig
     listing_template: showcase.twig
 
-    
+
 showcases:
     name: Showcases
-    singular_name: showcaseitem 
+    singular_name: showcaseitem
     fields:
         title:
             type: text
@@ -186,7 +189,7 @@ submitted_website:
 
 blocks:
     name: Blocks
-    singular_name: block 
+    singular_name: block
     fields:
         title:
             type: text
@@ -209,7 +212,7 @@ blocks:
             label: Linkt naar
     record_template: newsitem.twig
     listing_template: showcase.twig
- 
+
 # UITFASEREN!:
 homepage:
     name: Homepage
@@ -236,7 +239,7 @@ homepage:
             height: 150px
     template: index.twig
 
-   
+
 
 # possible field types:
 # text - varchar(256) - input type text
