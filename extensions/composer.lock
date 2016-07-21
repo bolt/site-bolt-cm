@@ -4,21 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "a4369e0754e5541562aec391aff66705",
-    "content-hash": "14ecacc6761efff8dc169f1156ac019e",
+    "hash": "458daf3122ec18b919816835d1ace995",
+    "content-hash": "477a85d8eb1410899e5f0f1bafd2e427",
     "packages": [
         {
             "name": "bobdenotter/seo",
-            "version": "v0.10.1",
+            "version": "v0.10.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bobdenotter/seo.git",
-                "reference": "5f8288aa7d44dd55b448e8ac92ec2bb25e6175fd"
+                "reference": "f562dc87ed7b73220520a3679234a79fc2238dd6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bobdenotter/seo/zipball/5f8288aa7d44dd55b448e8ac92ec2bb25e6175fd",
-                "reference": "5f8288aa7d44dd55b448e8ac92ec2bb25e6175fd",
+                "url": "https://api.github.com/repos/bobdenotter/seo/zipball/f562dc87ed7b73220520a3679234a79fc2238dd6",
+                "reference": "f562dc87ed7b73220520a3679234a79fc2238dd6",
                 "shasum": ""
             },
             "require": {
@@ -45,10 +45,10 @@
             ],
             "description": "An extension to easily manage SEO title, meta description and OG tags.",
             "support": {
-                "source": "https://github.com/bobdenotter/seo/tree/v0.10.1",
+                "source": "https://github.com/bobdenotter/seo/tree/v0.10.3",
                 "issues": "https://github.com/bobdenotter/seo/issues"
             },
-            "time": "2016-05-28 12:21:41"
+            "time": "2016-07-07 07:56:29"
         },
         {
             "name": "bobdenotter/tweet-embed",
@@ -227,12 +227,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/GawainLynch/bolt-extension-file-browser.git",
-                "reference": "93028ad2ecf786283b780f1c13bd7851a1b9e38f"
+                "reference": "e99551ead342b5a8d8268c08b13b7cf878f772be"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GawainLynch/bolt-extension-file-browser/zipball/93028ad2ecf786283b780f1c13bd7851a1b9e38f",
-                "reference": "93028ad2ecf786283b780f1c13bd7851a1b9e38f",
+                "url": "https://api.github.com/repos/GawainLynch/bolt-extension-file-browser/zipball/e99551ead342b5a8d8268c08b13b7cf878f772be",
+                "reference": "e99551ead342b5a8d8268c08b13b7cf878f772be",
                 "shasum": ""
             },
             "require": {
@@ -242,13 +242,14 @@
             "extra": {
                 "bolt-assets": "web",
                 "bolt-class": "Bolt\\Extension\\Bolt\\FileDirectoryBrowser\\FileDirectoryBrowserExtension",
-                "branch-alias": {
-                    "dev-master": "3.0.x-dev"
-                },
+                "bolt-icon": "icon.png",
                 "bolt-screenshots": [
                     "screenshot-main.png",
                     "screenshot-subdirectory.png"
-                ]
+                ],
+                "branch-alias": {
+                    "dev-master": "3.0.x-dev"
+                }
             },
             "autoload": {
                 "psr-4": {
@@ -275,20 +276,20 @@
                 "source": "https://github.com/GawainLynch/bolt-extension-file-browser/tree/master",
                 "issues": "https://github.com/GawainLynch/bolt-extension-file-browser/issues"
             },
-            "time": "2016-07-01 13:23:20"
+            "time": "2016-07-21 13:59:56"
         },
         {
             "name": "ohlandt/user-profiles",
-            "version": "2.0.0",
+            "version": "2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PhillippOhlandt/bolt-extension-user-profiles.git",
-                "reference": "331dc3aed289e19a214bee759b784cd2e19e3bd2"
+                "reference": "dc2c0f2c4873f457dfc9f11ee97abc01ed25446c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PhillippOhlandt/bolt-extension-user-profiles/zipball/331dc3aed289e19a214bee759b784cd2e19e3bd2",
-                "reference": "331dc3aed289e19a214bee759b784cd2e19e3bd2",
+                "url": "https://api.github.com/repos/PhillippOhlandt/bolt-extension-user-profiles/zipball/dc2c0f2c4873f457dfc9f11ee97abc01ed25446c",
+                "reference": "dc2c0f2c4873f457dfc9f11ee97abc01ed25446c",
                 "shasum": ""
             },
             "require": {
@@ -329,10 +330,10 @@
                 "user"
             ],
             "support": {
-                "source": "https://github.com/PhillippOhlandt/bolt-extension-user-profiles/tree/2.0.0",
+                "source": "https://github.com/PhillippOhlandt/bolt-extension-user-profiles/tree/master",
                 "issues": "https://github.com/PhillippOhlandt/bolt-extension-user-profiles/issues"
             },
-            "time": "2016-05-26 08:38:07"
+            "time": "2016-07-01 19:49:58"
         }
     ],
     "packages-dev": [],
