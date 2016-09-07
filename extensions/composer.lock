@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "458daf3122ec18b919816835d1ace995",
-    "content-hash": "477a85d8eb1410899e5f0f1bafd2e427",
+    "hash": "6a2b9ff9d0dd3f1519f175625864bd08",
+    "content-hash": "8eaf2c337b5370e3bb047409a9da0456",
     "packages": [
         {
             "name": "bobdenotter/seo",
@@ -96,23 +96,23 @@
                 "twitter"
             ],
             "support": {
-                "source": "https://github.com/bobdenotter/bolt-tweet-embed/tree/master",
+                "source": "https://github.com/bobdenotter/bolt-tweet-embed/tree/v1.0.2",
                 "issues": "https://github.com/bobdenotter/bolt-tweet-embed/issues"
             },
             "time": "2016-04-26 08:14:41"
         },
         {
             "name": "bolt/boltforms",
-            "version": "dev-master",
+            "version": "3.1.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bolt/boltforms.git",
-                "reference": "1d65eaf460be99b25d43e02d63467363d43b017a"
+                "reference": "97640b0b70d5683635a7b1893d81c8e69edfba85"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bolt/boltforms/zipball/1d65eaf460be99b25d43e02d63467363d43b017a",
-                "reference": "1d65eaf460be99b25d43e02d63467363d43b017a",
+                "url": "https://api.github.com/repos/bolt/boltforms/zipball/97640b0b70d5683635a7b1893d81c8e69edfba85",
+                "reference": "97640b0b70d5683635a7b1893d81c8e69edfba85",
                 "shasum": ""
             },
             "require": {
@@ -171,7 +171,7 @@
                 "source": "https://github.com/bolt/boltforms/tree/master",
                 "issues": "https://github.com/bolt/boltforms/issues"
             },
-            "time": "2016-06-28 07:01:36"
+            "time": "2016-08-20 06:18:54"
         },
         {
             "name": "bolt/disqus",
@@ -223,7 +223,7 @@
         },
         {
             "name": "bolt/file-browser",
-            "version": "dev-master",
+            "version": "3.0.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/GawainLynch/bolt-extension-file-browser.git",
