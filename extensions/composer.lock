@@ -96,23 +96,23 @@
                 "twitter"
             ],
             "support": {
-                "source": "https://github.com/bobdenotter/bolt-tweet-embed/tree/v1.0.2",
+                "source": "https://github.com/bobdenotter/bolt-tweet-embed/tree/master",
                 "issues": "https://github.com/bobdenotter/bolt-tweet-embed/issues"
             },
             "time": "2016-04-26 08:14:41"
         },
         {
             "name": "bolt/boltforms",
-            "version": "3.1.x-dev",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bolt/boltforms.git",
-                "reference": "97640b0b70d5683635a7b1893d81c8e69edfba85"
+                "reference": "1d65eaf460be99b25d43e02d63467363d43b017a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bolt/boltforms/zipball/97640b0b70d5683635a7b1893d81c8e69edfba85",
-                "reference": "97640b0b70d5683635a7b1893d81c8e69edfba85",
+                "url": "https://api.github.com/repos/bolt/boltforms/zipball/1d65eaf460be99b25d43e02d63467363d43b017a",
+                "reference": "1d65eaf460be99b25d43e02d63467363d43b017a",
                 "shasum": ""
             },
             "require": {
@@ -171,7 +171,7 @@
                 "source": "https://github.com/bolt/boltforms/tree/master",
                 "issues": "https://github.com/bolt/boltforms/issues"
             },
-            "time": "2016-08-20 06:18:54"
+            "time": "2016-06-28 07:01:36"
         },
         {
             "name": "bolt/disqus",
@@ -223,16 +223,16 @@
         },
         {
             "name": "bolt/file-browser",
-            "version": "3.0.x-dev",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/GawainLynch/bolt-extension-file-browser.git",
-                "reference": "e99551ead342b5a8d8268c08b13b7cf878f772be"
+                "reference": "f725d1a60a3dab809cc043e8ea4998579af7e9f6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GawainLynch/bolt-extension-file-browser/zipball/e99551ead342b5a8d8268c08b13b7cf878f772be",
-                "reference": "e99551ead342b5a8d8268c08b13b7cf878f772be",
+                "url": "https://api.github.com/repos/GawainLynch/bolt-extension-file-browser/zipball/f725d1a60a3dab809cc043e8ea4998579af7e9f6",
+                "reference": "f725d1a60a3dab809cc043e8ea4998579af7e9f6",
                 "shasum": ""
             },
             "require": {
@@ -276,7 +276,7 @@
                 "source": "https://github.com/GawainLynch/bolt-extension-file-browser/tree/master",
                 "issues": "https://github.com/GawainLynch/bolt-extension-file-browser/issues"
             },
-            "time": "2016-07-21 13:59:56"
+            "time": "2016-09-09 06:05:34"
         },
         {
             "name": "ohlandt/user-profiles",
