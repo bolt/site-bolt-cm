@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "6a2b9ff9d0dd3f1519f175625864bd08",
-    "content-hash": "8eaf2c337b5370e3bb047409a9da0456",
+    "hash": "9dd98a0f9939bf28b93a04e411fb9619",
+    "content-hash": "2a96baeecb33822198dd22ed5241aa63",
     "packages": [
         {
             "name": "bobdenotter/seo",
@@ -116,7 +116,8 @@
                 "shasum": ""
             },
             "require": {
-                "bolt/bolt": "^3.0"
+                "bolt/bolt": "^3.0",
+                "bolt/email-spooler": "^3.0"
             },
             "require-dev": {
                 "phpunit/phpunit": "^4.7"
@@ -220,6 +221,55 @@
                 "issues": "https://github.com/bolt/Disqus/issues"
             },
             "time": "2016-05-28 12:06:15"
+        },
+        {
+            "name": "bolt/email-spooler",
+            "version": "v3.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/GawainLynch/bolt-extension-email-spooler.git",
+                "reference": "e9f338c572f9aeb3f16162bd60f8877c75b6e09d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/GawainLynch/bolt-extension-email-spooler/zipball/e9f338c572f9aeb3f16162bd60f8877c75b6e09d",
+                "reference": "e9f338c572f9aeb3f16162bd60f8877c75b6e09d",
+                "shasum": ""
+            },
+            "require": {
+                "bolt/bolt": "^3.0",
+                "php": ">=5.5.9"
+            },
+            "type": "bolt-extension",
+            "extra": {
+                "bolt-class": "Bolt\\Extension\\Bolt\\EmailSpooler\\EmailSpoolerExtension",
+                "branch-alias": {
+                    "dev-master": "3.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Bolt\\Extension\\Bolt\\EmailSpooler\\": "src"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Gawain Lynch",
+                    "email": "gawain.lynch@gmail.com"
+                }
+            ],
+            "keywords": [
+                "email",
+                "spool"
+            ],
+            "support": {
+                "source": "https://github.com/GawainLynch/bolt-extension-email-spooler/tree/master",
+                "issues": "https://github.com/GawainLynch/bolt-extension-email-spooler/issues"
+            },
+            "time": "2016-09-16 15:11:09"
         },
         {
             "name": "bolt/file-browser",
