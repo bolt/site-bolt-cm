@@ -15,7 +15,7 @@ keywords_length: 0 #255
 # Default values to consider for the title, meta description and meta keywords
 fields:
     title: ['title', 'name']
-    description: ['text_markdown', 'introduction', 'teaser', 'description', 'body']
+    description: ['introduction', 'teaser', 'description', 'body']
     keywords: []
 
 # The default title and description. If these are left empty, the extension will use the

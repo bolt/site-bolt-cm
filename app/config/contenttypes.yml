@@ -18,16 +18,13 @@ news:
             type: image
             label: "OG Image"
             postfix: "<p>Use this to specify the image in the OG image tag.</p>"
-        text_markdown:
+        body:
             type: markdown
+            label: Body
             height: 400px
             allowtwig: true
             group: Content
         introduction:
-            type: html
-            height: 300px
-            allowtwig: true
-        text:
             type: html
             height: 300px
             allowtwig: true
