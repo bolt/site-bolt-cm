@@ -4,44 +4,45 @@
 
 {% block content %}
 
-<section class="maininfo">
-    <div class="maincolumn ">
-        {% block directory_index %}
+    <section class="maininfo">
+        <div class="maincolumn ">
+            {% block directory_index %}
 
-            <div class="row">
-                <div class="small-12 columns">
-                    <table>
-                        <thead>
-                        <tr>
-                            {{- include(templates.header) -}}
-                        </tr>
-                        </thead>
-                        <tbody>
-                        {% if parent_dir %}
+                <div class="row">
+                    <div class="small-12 columns">
+                        <table>
+                            <thead>
                             <tr>
-                                <td><i class="fa fa-fw fa-folder"></i> <a href="{{ parent_dir|e('html') }}">..</a></td>
-                                <td></td>
-                                <td></td>
+                                {{- include(templates.header) -}}
                             </tr>
-                        {% endif %}
-                        {% for dir in directories %}
-                            <tr>
-                                {{- include(templates.directory) -}}
-                            </tr>
-                        {% endfor %}
-                        {% for file in files %}
-                            <tr>
-                                {{- include(templates.file) -}}
-                            </tr>
-                        {% endfor %}
-                        </tbody>
-                    </table>
+                            </thead>
+                            <tbody>
+                            {% if parent_dir %}
+                                <tr>
+                                    <td><i class="fa fa-fw fa-folder"></i> <a href="{{ parent_dir|e('html') }}">..</a>
+                                    </td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            {% endif %}
+                            {% for dir in directories %}
+                                <tr>
+                                    {{- include(templates.directory) -}}
+                                </tr>
+                            {% endfor %}
+                            {% for file in files %}
+                                <tr>
+                                    {{- include(templates.file) -}}
+                                </tr>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
-            </div>
 
-        {% endblock directory_index %}
-    </div>
-</section>
+            {% endblock directory_index %}
+        </div>
+    </section>
 
 {% endblock content %}
 

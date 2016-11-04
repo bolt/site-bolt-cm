@@ -4,12 +4,12 @@
 
 {% block content %}
 
-{% if record.contenttype.slug =='news' %}
-    <link rel="stylesheet" href="{{ asset('css/site.css', 'theme') }}" type="text/css" media="all" />
-    {% set news = true %}
-{% else %}
-    {% set news = false %}
-{% endif %}
+    {% if record.contenttype.slug =='news' %}
+        <link rel="stylesheet" href="{{ asset('css/site.css', 'theme') }}" type="text/css" media="all" />
+        {% set news = true %}
+    {% else %}
+        {% set news = false %}
+    {% endif %}
 
     {% if app.extensions.get('Ohlandt/UserProfiles') %}
         {% set use_profiles = true %}
@@ -17,54 +17,56 @@
         {% set use_profiles = false %}
     {% endif %}
 
-<section class="maininfo">
-    <div class="maincolumn ">
-        <article class="row">
-            <h1><a href="{{record.link}}">{{record.title}}</a></h1>
-            {# <h2 class="subheader">{{record.subtitle}}</h2> #}
-            {% if news %}
-                <p class="meta" title="{{ record.datepublish|date("j F Y - H:i") }}">Published: {{ record.datepublish|date("l j F Y") }} by
-                    <a href="{{ profile_link(record.user) }}">{{ record.user.displayname }}</a>
-                </p>
-            {% endif %}
-            <div class="articlebody">
-                {% if record.image %}
-                <a href="{{ record.image|image() }}" class="magnific">
-                    <img src="{{ record.image|thumbnail(700,3000,'r') }}">
-                </a>
-                {% endif %}
-                {{  record.introduction }}
-                {{  record.text }}
-                {{  record.body }}
-
+    <section class="maininfo">
+        <div class="maincolumn ">
+            <article class="row">
+                <h1><a href="{{ record.link }}">{{ record.title }}</a></h1>
+                {# <h2 class="subheader">{{record.subtitle}}</h2> #}
                 {% if news %}
+                    <p class="meta" title="{{ record.datepublish|date("j F Y - H:i") }}">
+                    Published: {{ record.datepublish|date("l j F Y") }} by
+                    <a href="{{ profile_link(record.user) }}">{{ record.user.displayname }}</a>
+                    </p>
+                {% endif %}
+                <div class="articlebody">
+                    {% if record.image %}
+                        <a href="{{ record.image|image() }}" class="magnific">
+                            <img src="{{ record.image|thumbnail(700,3000,'r') }}"> </a>
+                    {% endif %}
+                    {{ record.introduction }}
+                    {{ record.text }}
+                    {{ record.body }}
 
-                    {% if use_profiles %}
-                        <div class="user-info">
-                            <img class="avatar" src="{{ avatar(record.user, 100) }}">
-                            <div class="info">
-                                <a class="username" href="{{ profile_link(record.user) }}">{{ record.user.displayname }}</a>
-                                <p>{{ record.user.description|raw|nl2br }}</p>
+                    {% if news %}
+
+                        {% if use_profiles %}
+                            <div class="user-info">
+                                <img class="avatar" src="{{ avatar(record.user, 100) }}">
+                                <div class="info">
+                                    <a class="username"
+                                       href="{{ profile_link(record.user) }}">{{ record.user.displayname }}</a>
+                                    <p>{{ record.user.description|raw|nl2br }}</p>
+                                </div>
                             </div>
-                        </div>
 
+                        {% endif %}
+
+                        <div class="disqus">
+                            {{ disqus() }}
+                        </div>
                     {% endif %}
 
-                    <div class="disqus">
-                    {{ disqus() }}
-                    </div>
-                {% endif %}
+                    {% if record.slug =='irc' %}
+                        <iframe src="https://kiwiirc.com/client?settings=8a78db10b57fff9f5d6a2fe144acb6a4"
+                                style="border:0; width:100%; height:550px;"></iframe>
+                    {% endif %}
 
-                {% if record.slug =='irc' %}
-                <iframe src="https://kiwiirc.com/client?settings=8a78db10b57fff9f5d6a2fe144acb6a4" style="border:0; width:100%; height:550px;"></iframe>
-                {% endif %}
+                </div>
 
-            </div>
+            </article>
 
-        </article>
-
-    </div>
-</section>
+        </div>
+    </section>
 
 {% endblock content %}
 

@@ -8,36 +8,37 @@
 
 {% block content %}
 
-<section class="maininfo">
-    <div class="maincolumn ">
-        <article class="row user-profile">
-            <link rel="stylesheet" href="{{ asset('css/site.css', 'theme') }}" type="text/css" media="all" />
+    <section class="maininfo">
+        <div class="maincolumn ">
+            <article class="row user-profile">
+                <link rel="stylesheet" href="{{ asset('css/site.css', 'theme') }}" type="text/css" media="all" />
 
-            <h1>{{ user.displayname }}</h1>
-            <div class="user-info articlebody">
-                <img class="avatar" src="{{ avatar(user, 100) }}">
-                <div class="info">
-                    <p>{{ user.description|raw|nl2br }}</p>
-                </div>
-            </div>
-
-            {% setcontent news = 'news' where {ownerid: user.id} orderby '-datepublish' %}
-
-            {% if news is not empty %}
-                <div class="newsitems articlebody">
-                <h2>Latest News</h2>
-                {% for item in news %}
-                    <div>
-                        <h3><a href="{{item.link}}">{{item.title}}</a></h3>
-                        <p class="meta" title="{{ item.datepublish|date("j F Y - H:i") }}">Published: {{ item.datepublish|date("l j F Y") }}</p>
+                <h1>{{ user.displayname }}</h1>
+                <div class="user-info articlebody">
+                    <img class="avatar" src="{{ avatar(user, 100) }}">
+                    <div class="info">
+                        <p>{{ user.description|raw|nl2br }}</p>
                     </div>
-                {% endfor %}
-            </div>
-            {% endif %}
-        </article>
+                </div>
 
-    </div>
-</section>
+                {% setcontent news = 'news' where {ownerid: user.id} orderby '-datepublish' %}
+
+                {% if news is not empty %}
+                    <div class="newsitems articlebody">
+                        <h2>Latest News</h2>
+                        {% for item in news %}
+                            <div>
+                                <h3><a href="{{ item.link }}">{{ item.title }}</a></h3>
+                                <p class="meta" title="{{ item.datepublish|date("j F Y - H:i") }}">
+                                Published: {{ item.datepublish|date("l j F Y") }}</p>
+                            </div>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            </article>
+
+        </div>
+    </section>
 
 {% endblock content %}
 
