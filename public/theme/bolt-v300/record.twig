@@ -5,10 +5,17 @@
 {% block content %}
 
 {% if record.contenttype.slug =='news' %}
+    <link rel="stylesheet" href="{{ asset('css/site.css', 'theme') }}" type="text/css" media="all" />
     {% set news = true %}
 {% else %}
     {% set news = false %}
 {% endif %}
+
+    {% if app.extensions.get('Ohlandt/UserProfiles') %}
+        {% set use_profiles = true %}
+    {% else %}
+        {% set use_profiles = false %}
+    {% endif %}
 
 <section class="maininfo">
     <div class="maincolumn ">
@@ -32,56 +39,7 @@
 
                 {% if news %}
 
-                    {% if app.extensions.get('Ohlandt/UserProfiles') %}
-                        <style>
-                            .articlebody .user-info {
-                                display: flex;
-                                padding: 20px 0px;
-                                border-top: 1px solid #aaa;
-                                border-bottom: 1px solid #aaa;
-                            }
-
-                            @media only screen and (max-width: 50.063em) {
-                                .articlebody .user-info {
-                                    flex-direction: column;
-                                    align-items: center;
-                                }
-
-                                .articlebody .user-info .avatar{
-                                    margin-right: 0px !important;
-                                    margin-bottom: 10px !important;
-                                }
-
-                                .articlebody .user-info .info .username {
-                                    display: block;
-                                    text-align: center;
-                                }
-                            }
-
-                            .articlebody .user-info .avatar{
-                                margin-right: 10px;
-                                margin-bottom: 0px;
-                                width: 70px;
-                                height: 70px;
-                                border-radius: 5px;
-                            }
-
-                            .articlebody .user-info .info .username {
-                                color: inherit;
-                                font-size: 20px;
-                                font-weight: 300;
-                            }
-
-                            .articlebody .user-info .info .username:hover {
-                                color: #d62c08;
-                            }
-
-                            .articlebody .user-info .info p {
-                                margin-bottom: 0px;
-                                font-size: 14px;
-                            }
-                        </style>
-
+                    {% if use_profiles %}
                         <div class="user-info">
                             <img class="avatar" src="{{ avatar(record.user, 100) }}">
                             <div class="info">
