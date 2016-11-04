@@ -12,7 +12,7 @@ database:
 #    password: xx
 
 # The name of the website
-sitename: BoltCM
+sitename: Bolt CMS
 payoff: Sophisticated, Lightweight and Simple
 
 # The theme to use. Be sure to copy the {theme_path}/base-2016 folder, and
