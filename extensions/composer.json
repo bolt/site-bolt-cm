@@ -33,7 +33,8 @@
         "bobdenotter/seo": "^0.10.0",
         "bobdenotter/tweet-embed": "^1.0",
         "ohlandt/user-profiles": "^2.0",
-        "bolt/file-browser": "^3.0@dev"
+        "bolt/file-browser": "^3.0@dev",
+        "bolt/sitemap": "^2.0"
     },
     "scripts": {
         "post-autoload-dump": "Bolt\\Composer\\EventListener\\PackageEventListener::dump",

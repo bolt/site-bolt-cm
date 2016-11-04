@@ -1,0 +1,16 @@
+# sitemap settings
+
+template: sitemap.twig
+xml_template: sitemap_xml.twig
+
+ignore:
+  - /page/error404
+
+## ignore by "slug" of contenttype
+ignore_contenttype:
+  - blocks
+  - slides
+  - submitted_website
+
+## ignore listing templates
+#ignore_listing: true
