@@ -1,8 +1,14 @@
-### Bolt Installer for Composer
+Bolt.cm Site
+------------
 
-To start the install just run the following command replacing the project with the name you want to use.
+This is the repository of the web site that runs https://bolt.cm
 
-`composer create-project bolt/composer-install:^3.0 <MYPROJECT> --prefer-dist`
+## Set up
 
+```
+git clone https://github.com/bolt/site-v30.git /path/to/site/
+composer install
+cd extensions
+composer install
+```
 
-After the packages have downloaded, you can choose whether you would like a separate public directory and if so choose a name.
