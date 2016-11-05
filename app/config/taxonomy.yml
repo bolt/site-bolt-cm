@@ -7,7 +7,7 @@ tags:
     behaves_like: tags
     postfix: "Add some freeform tags. Start a new tag by typing a comma or space."
     allow_spaces: false
-    #listing_template: tag-listing.twig #custom template
+    listing_template: tag_listing.twig #custom template
 
 chapters:
     slug: chapters
