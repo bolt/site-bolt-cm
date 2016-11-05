@@ -1,0 +1,49 @@
+{#
+ # Passed in variables:
+ #   templates
+ #     parent    — The name of the template to extend
+ #     index     — Index listing template
+ #     header    — Table header template
+ #     directory — Directory entry template
+ #     file      — File entry template
+ #   directories — An array of SplFileInfo objects for directories in this directory
+ #   files       — An array of SplFileInfo objects for files in this directory
+ #   base        — The Base URL for the directory containing this file
+ #   parent_dir  — Parent directory
+ #}
+{% extends templates.parent %}
+
+{% block directory_index %}
+
+    <div class="row">
+        <div class="small-12 columns">
+            <table style="width: 100%">
+                <thead>
+                <tr>
+                    {{- include(templates.header) -}}
+                </tr>
+                </thead>
+                <tbody>
+                {% if parent_dir %}
+                    <tr>
+                        <td><i class="fa fa-fw fa-folder"></i> <a href="{{ parent_dir|e('html') }}">..</a></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                {% endif %}
+                {% for dir in directories %}
+                    <tr>
+                        {{- include(templates.directory) -}}
+                    </tr>
+                {% endfor %}
+                {% for file in files %}
+                    <tr>
+                        {{- include(templates.file) -}}
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+{% endblock directory_index %}

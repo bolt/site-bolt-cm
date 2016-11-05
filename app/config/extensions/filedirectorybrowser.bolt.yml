@@ -1,5 +1,6 @@
 templates:
     parent: distribution.twig
+    index: partials/_distribution_index.twig
 
 ## Load CSS for Font Awesome
 assets:
