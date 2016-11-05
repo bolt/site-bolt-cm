@@ -65,9 +65,9 @@
 
 {% block footer_extra_scripts %}
     {# Load Masonry Layout System#}
-    <script src="{{ paths.theme }}scripts/layout_showroom.min.js"></script>
+    <script src="{{ asset('scripts/layout_showroom.min.js', 'theme') }}"></script>
     {# Load Masonry Image Loader #}
-    <script src="{{ paths.theme }}scripts/imagesloaded.pkgd.min.js"></script>
+    <script src="{{ asset('scripts/imagesloaded.pkgd.min.js', 'theme') }}"></script>
     <script type="text/javascript">
         var $grid = $('.grid').masonry(
                 {

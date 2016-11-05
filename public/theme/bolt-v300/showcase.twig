@@ -49,7 +49,7 @@
 
 {% block logo %}
     <h1 id="logo">
-        <a href="/showcase"><img src="{{ paths.theme }}images/bolt_showroom.png" width='245' alt="{{ app.config.get('general/sitename') }}" /></a>
+        <a href="/showcase"><img src="{{ asset('images/bolt_showroom.png', 'theme') }}" width='245' alt="{{ app.config.get('general/sitename') }}" /></a>
     </h1>
 {% endblock logo %}
 
@@ -57,10 +57,6 @@
 {% block coverimage %}url({{ thumbnail(record.image, 1900, 800,"r") }}){% endblock %}
 
 {% block footer_extra_scripts %}
-    {# Load Masonry Layout System#}
-    {# <script src="{{ paths.theme }}scripts/layout_showroom.min.js"></script> #}
-    {# Load Masonry Image Loader #}
-    {# <script src="{{ paths.theme }}scripts/imagesloaded.pkgd.min.js"></script> #}
     <script type="text/javascript">
         var $grid = $('.grid').masonry(
                 {
