@@ -4,8 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "4a81850c36a65d2f1c05ad3bfc2c4edf",
-    "content-hash": "392a8c73c3e95665e64c30e8115796ba",
+    "content-hash": "a3b77f8d226ff82405d3756055321263",
     "packages": [
         {
             "name": "bobdenotter/seo",
@@ -48,7 +47,7 @@
                 "source": "https://github.com/bobdenotter/seo/tree/v0.10.3",
                 "issues": "https://github.com/bobdenotter/seo/issues"
             },
-            "time": "2016-07-07 07:56:29"
+            "time": "2016-07-07T07:56:29+00:00"
         },
         {
             "name": "bobdenotter/tweet-embed",
@@ -99,25 +98,24 @@
                 "source": "https://github.com/bobdenotter/bolt-tweet-embed/tree/master",
                 "issues": "https://github.com/bobdenotter/bolt-tweet-embed/issues"
             },
-            "time": "2016-04-26 08:14:41"
+            "time": "2016-04-26T08:14:41+00:00"
         },
         {
             "name": "bolt/boltforms",
-            "version": "dev-master",
+            "version": "v3.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bolt/boltforms.git",
-                "reference": "1d65eaf460be99b25d43e02d63467363d43b017a"
+                "reference": "3d7edfe2356fd71146227211ad790a3bde20ae17"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bolt/boltforms/zipball/1d65eaf460be99b25d43e02d63467363d43b017a",
-                "reference": "1d65eaf460be99b25d43e02d63467363d43b017a",
+                "url": "https://api.github.com/repos/bolt/boltforms/zipball/3d7edfe2356fd71146227211ad790a3bde20ae17",
+                "reference": "3d7edfe2356fd71146227211ad790a3bde20ae17",
                 "shasum": ""
             },
             "require": {
-                "bolt/bolt": "^3.0",
-                "bolt/email-spooler": "^3.0"
+                "bolt/bolt": "^3.0"
             },
             "require-dev": {
                 "phpunit/phpunit": "^4.7"
@@ -131,7 +129,7 @@
                 "bolt-class": "Bolt\\Extension\\Bolt\\BoltForms\\BoltFormsExtension",
                 "bolt-icon": "icon-boltforms.png",
                 "branch-alias": {
-                    "dev-master": "3.1.x-dev"
+                    "dev-master": "3.0.x-dev"
                 }
             },
             "autoload": {
@@ -140,10 +138,7 @@
                         "src/"
                     ],
                     "ReCaptcha\\": "lib/ReCaptcha/"
-                },
-                "classmap": [
-                    "doc/example/"
-                ]
+                }
             },
             "autoload-dev": {
                 "psr-4": {
@@ -152,7 +147,8 @@
                 }
             },
             "license": [
-                "GPL-3.0+"
+                "GPL-3.0+",
+                "LGPL-3.0+"
             ],
             "authors": [
                 {
@@ -169,10 +165,10 @@
                 "uploads"
             ],
             "support": {
-                "source": "https://github.com/bolt/boltforms/tree/master",
+                "source": "https://github.com/bolt/boltforms/tree/3.1",
                 "issues": "https://github.com/bolt/boltforms/issues"
             },
-            "time": "2016-06-28 07:01:36"
+            "time": "2016-10-31T11:22:11+00:00"
         },
         {
             "name": "bolt/disqus",
@@ -220,56 +216,7 @@
                 "source": "https://github.com/bolt/Disqus/tree/v2.0.1",
                 "issues": "https://github.com/bolt/Disqus/issues"
             },
-            "time": "2016-05-28 12:06:15"
-        },
-        {
-            "name": "bolt/email-spooler",
-            "version": "v3.0.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/GawainLynch/bolt-extension-email-spooler.git",
-                "reference": "e9f338c572f9aeb3f16162bd60f8877c75b6e09d"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/GawainLynch/bolt-extension-email-spooler/zipball/e9f338c572f9aeb3f16162bd60f8877c75b6e09d",
-                "reference": "e9f338c572f9aeb3f16162bd60f8877c75b6e09d",
-                "shasum": ""
-            },
-            "require": {
-                "bolt/bolt": "^3.0",
-                "php": ">=5.5.9"
-            },
-            "type": "bolt-extension",
-            "extra": {
-                "bolt-class": "Bolt\\Extension\\Bolt\\EmailSpooler\\EmailSpoolerExtension",
-                "branch-alias": {
-                    "dev-master": "3.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Bolt\\Extension\\Bolt\\EmailSpooler\\": "src"
-                }
-            },
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Gawain Lynch",
-                    "email": "gawain.lynch@gmail.com"
-                }
-            ],
-            "keywords": [
-                "email",
-                "spool"
-            ],
-            "support": {
-                "source": "https://github.com/GawainLynch/bolt-extension-email-spooler/tree/master",
-                "issues": "https://github.com/GawainLynch/bolt-extension-email-spooler/issues"
-            },
-            "time": "2016-09-16 15:11:09"
+            "time": "2016-05-28T12:06:15+00:00"
         },
         {
             "name": "bolt/file-browser",
@@ -277,12 +224,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/GawainLynch/bolt-extension-file-browser.git",
-                "reference": "f725d1a60a3dab809cc043e8ea4998579af7e9f6"
+                "reference": "b6c4dbc8a3f4a8b711dd7c4dd9298ec7f6794736"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GawainLynch/bolt-extension-file-browser/zipball/f725d1a60a3dab809cc043e8ea4998579af7e9f6",
-                "reference": "f725d1a60a3dab809cc043e8ea4998579af7e9f6",
+                "url": "https://api.github.com/repos/GawainLynch/bolt-extension-file-browser/zipball/b6c4dbc8a3f4a8b711dd7c4dd9298ec7f6794736",
+                "reference": "b6c4dbc8a3f4a8b711dd7c4dd9298ec7f6794736",
                 "shasum": ""
             },
             "require": {
@@ -326,7 +273,7 @@
                 "source": "https://github.com/GawainLynch/bolt-extension-file-browser/tree/master",
                 "issues": "https://github.com/GawainLynch/bolt-extension-file-browser/issues"
             },
-            "time": "2016-09-09 06:05:34"
+            "time": "2017-01-15 07:13:37"
         },
         {
             "name": "bolt/sitemap",
@@ -381,7 +328,7 @@
                 "source": "https://github.com/bolt/Sitemap/tree/master",
                 "issues": "https://github.com/bolt/Sitemap/issues"
             },
-            "time": "2016-08-01 10:19:10"
+            "time": "2016-08-01T10:19:10+00:00"
         },
         {
             "name": "ohlandt/user-profiles",
@@ -438,7 +385,7 @@
                 "source": "https://github.com/PhillippOhlandt/bolt-extension-user-profiles/tree/master",
                 "issues": "https://github.com/PhillippOhlandt/bolt-extension-user-profiles/issues"
             },
-            "time": "2016-07-01 19:49:58"
+            "time": "2016-07-01T19:49:58+00:00"
         }
     ],
     "packages-dev": [],
