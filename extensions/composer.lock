@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "af3d5560db0fff8c9324e73b8c4d3f9c",
+    "content-hash": "b29ce9dacf8a10a5599878bfdffa03fe",
     "packages": [
         {
             "name": "bobdenotter/seo",
@@ -172,16 +172,16 @@
         },
         {
             "name": "bolt/disqus",
-            "version": "v2.0.1",
+            "version": "v2.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bolt/Disqus.git",
-                "reference": "fbf6e5cd43451a9ed161d66ffcf54558025a13c4"
+                "reference": "2ac667b49bb029ef79b1c2b52075739816957c07"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bolt/Disqus/zipball/fbf6e5cd43451a9ed161d66ffcf54558025a13c4",
-                "reference": "fbf6e5cd43451a9ed161d66ffcf54558025a13c4",
+                "url": "https://api.github.com/repos/bolt/Disqus/zipball/2ac667b49bb029ef79b1c2b52075739816957c07",
+                "reference": "2ac667b49bb029ef79b1c2b52075739816957c07",
                 "shasum": ""
             },
             "require": {
@@ -213,10 +213,10 @@
                 "disqus"
             ],
             "support": {
-                "source": "https://github.com/bolt/Disqus/tree/v2.0.1",
+                "source": "https://github.com/bolt/Disqus/tree/v2.0.2",
                 "issues": "https://github.com/bolt/Disqus/issues"
             },
-            "time": "2016-05-28T12:06:15+00:00"
+            "time": "2017-05-04T10:09:02+00:00"
         },
         {
             "name": "bolt/file-browser",
@@ -224,12 +224,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/GawainLynch/bolt-extension-file-browser.git",
-                "reference": "4bef74965c63147503c88d9d5435a555daeaa9b3"
+                "reference": "f725d1a60a3dab809cc043e8ea4998579af7e9f6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GawainLynch/bolt-extension-file-browser/zipball/4bef74965c63147503c88d9d5435a555daeaa9b3",
-                "reference": "4bef74965c63147503c88d9d5435a555daeaa9b3",
+                "url": "https://api.github.com/repos/GawainLynch/bolt-extension-file-browser/zipball/f725d1a60a3dab809cc043e8ea4998579af7e9f6",
+                "reference": "f725d1a60a3dab809cc043e8ea4998579af7e9f6",
                 "shasum": ""
             },
             "require": {
@@ -273,20 +273,20 @@
                 "source": "https://github.com/GawainLynch/bolt-extension-file-browser/tree/master",
                 "issues": "https://github.com/GawainLynch/bolt-extension-file-browser/issues"
             },
-            "time": "2017-01-15 08:10:06"
+            "time": "2016-09-09T06:05:34+00:00"
         },
         {
             "name": "bolt/sitemap",
-            "version": "2.0.1",
+            "version": "2.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bolt/Sitemap.git",
-                "reference": "d321e61e04d2fe2e825352f1378b4ec12109b74d"
+                "reference": "745110b0b29008d5216d608b5b1bf64695a67a2a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bolt/Sitemap/zipball/d321e61e04d2fe2e825352f1378b4ec12109b74d",
-                "reference": "d321e61e04d2fe2e825352f1378b4ec12109b74d",
+                "url": "https://api.github.com/repos/bolt/Sitemap/zipball/745110b0b29008d5216d608b5b1bf64695a67a2a",
+                "reference": "745110b0b29008d5216d608b5b1bf64695a67a2a",
                 "shasum": ""
             },
             "require": {
@@ -325,10 +325,10 @@
                 "sitemap"
             ],
             "support": {
-                "source": "https://github.com/bolt/Sitemap/tree/master",
+                "source": "https://github.com/bolt/Sitemap/tree/2.1.1",
                 "issues": "https://github.com/bolt/Sitemap/issues"
             },
-            "time": "2016-08-01T10:19:10+00:00"
+            "time": "2017-05-04T10:12:13+00:00"
         },
         {
             "name": "ohlandt/user-profiles",
