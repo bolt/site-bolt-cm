@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "b29ce9dacf8a10a5599878bfdffa03fe",
+    "content-hash": "b553211037df9dd0c4c4b4266d2d65a8",
     "packages": [
         {
             "name": "bobdenotter/seo",
@@ -223,13 +223,13 @@
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/GawainLynch/bolt-extension-file-browser.git",
-                "reference": "f725d1a60a3dab809cc043e8ea4998579af7e9f6"
+                "url": "https://github.com/bolt/bolt-extension-file-browser.git",
+                "reference": "4bef74965c63147503c88d9d5435a555daeaa9b3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GawainLynch/bolt-extension-file-browser/zipball/f725d1a60a3dab809cc043e8ea4998579af7e9f6",
-                "reference": "f725d1a60a3dab809cc043e8ea4998579af7e9f6",
+                "url": "https://api.github.com/repos/bolt/bolt-extension-file-browser/zipball/4bef74965c63147503c88d9d5435a555daeaa9b3",
+                "reference": "4bef74965c63147503c88d9d5435a555daeaa9b3",
                 "shasum": ""
             },
             "require": {
@@ -273,7 +273,7 @@
                 "source": "https://github.com/GawainLynch/bolt-extension-file-browser/tree/master",
                 "issues": "https://github.com/GawainLynch/bolt-extension-file-browser/issues"
             },
-            "time": "2016-09-09T06:05:34+00:00"
+            "time": "2017-01-15 08:10:06"
         },
         {
             "name": "bolt/sitemap",
