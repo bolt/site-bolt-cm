@@ -30,7 +30,7 @@
     "require": {
         "bolt/disqus": "^2.0",
         "bolt/boltforms": "^3.1@dev",
-        "bobdenotter/seo": "^0.10.0",
+        "bobdenotter/seo": "~0.10",
         "bobdenotter/tweet-embed": "^1.0",
         "ohlandt/user-profiles": "^2.0",
         "bolt/file-browser": "^3.0@dev",
