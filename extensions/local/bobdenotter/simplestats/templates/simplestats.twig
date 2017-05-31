@@ -1,0 +1,21 @@
+{% extends '_base/_page-nav.twig' %}
+
+{#=== Options ============================================================================#}
+
+{% if data is not defined or data is not iterable %}
+    {% set data = [] %}
+{% endif %}
+
+{#=== FIELDSET ============================================================================#}
+
+
+{% block page_nav 'SimpleStats' %}
+
+{% block page_title __('SimpleStats') %}
+
+{% block page_main %}
+
+    Hi!
+
+
+{% endblock page_main %}
