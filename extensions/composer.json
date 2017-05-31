@@ -1,7 +1,8 @@
 {
     "autoload": {
         "psr-4": {
-            "Bolt\\Composer\\EventListener\\": "../vendor/bolt/bolt/src/Composer/EventListener"
+            "Bolt\\Composer\\EventListener\\": "../vendor/bolt/bolt/src/Composer/EventListener",
+            "Local\\Simplestats\\": "local/bobdenotter/simplestats/src"
         }
     },
     "config": {
