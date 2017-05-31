@@ -5,10 +5,9 @@
     "license": "MIT",
     "require": {
         "php": "^5.5.9 || ^7.0",
-        "bolt/bolt": "v3.3.0-beta7",
+        "bolt/bolt": "^3.3@beta",
         "PasswordLib/PasswordLib": "^1.0@beta"
     },
-    "minimum-stability": "dev",
     "prefer-stable": true,
     "scripts": {
         "post-install-cmd": [
