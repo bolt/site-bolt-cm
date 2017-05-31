@@ -22,7 +22,7 @@
                                 <img src="{{ item.image|thumbnail(700,300) }}"> </a>
                         {% endif %}
 
-                        {% if "new release" not in item.taxonomy.categories %}
+                        {% if "new release" not in item.taxonomy.categories|default %}
                             <p>{{ item.excerpt(600) }}</p>
                             <a href="{{ item.link }}" class="button">Read the full article</a>
                         {% else %}
