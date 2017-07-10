@@ -336,9 +336,9 @@ liveeditor: false
 # Protip: If your webhost does not support SMTP, sign up for a (free) Sendgrid
 # account at https://sendgrid.com/free for sending emails reliably.
 
-# mailoptions:
-#     transport: smtp
-#     spool: true
+mailoptions:
+    transport: smtp
+    spool: true
 #     host: localhost
 #     port: 25
 #     username: username
@@ -347,10 +347,6 @@ liveeditor: false
 #     auth_mode: null
 #     senderMail: null
 #     senderName: null
-
-mailoptions:
-    transport: mail
-    spool: false
 
 # Bolt allows some modifications to how 'strict' login sessions are. For every
 # option that is set to true, it becomes harder for a bad-willing person to
