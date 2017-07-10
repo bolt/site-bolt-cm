@@ -1,2 +1,3 @@
-#extensions:
+extensions:
+  - Bolt\Site\SiteExtension
 #  - Local\Simplestats\SimpleStatsExtension

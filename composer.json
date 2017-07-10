@@ -22,5 +22,10 @@
             "Bolt\\Composer\\ScriptHandler::installThemesAndFiles",
             "nut extensions:setup"
         ]
+    },
+    "autoload": {
+        "psr-4": {
+            "Bolt\\Site\\": "src"
+        }
     }
 }
