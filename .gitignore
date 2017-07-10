@@ -1,7 +1,7 @@
 app/cache/*
 app/database/boltsite.db
 public/adminer.php
-public/bolt-public/view/
+public/bolt-public/*
 public/files/*
 public/thumbs/*
 vendor
@@ -10,4 +10,3 @@ bower_components/
 node_modules/
 .DS_Store
 composer.phar
-
