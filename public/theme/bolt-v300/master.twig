@@ -24,7 +24,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/app/view/img/apple-touch-icon-180x180.png">
 
     <meta property="og:site_name" content="{{ app.config.get('general/sitename') }}" />
-    <meta property="og:url" content="{{ paths.canonicalurl }}" />
+    <meta property="og:url" content="{{ canonical() }}" />
     {% if record.image is not empty %}
         <meta property="og:image" content="https://bolt.cm/{{ record.image|thumbnail(1000, 1000) }}" />
     {% elseif record.ogimage is not empty %}
@@ -44,7 +44,6 @@
 <body class="{%- block bodyclass -%}{%- endblock -%}">
 
 {% setcontent home = 'pages/homepage' %}
-{% setcontent currentversion = 'blocks/version' %}
 <header style="background-image: {% block coverimage %} url({{ thumbnail(home.image, 1900, 800,"c") }}) {% endblock %};">
     <div class="inner">
         {% block header %}
@@ -69,7 +68,7 @@
             <a class="button download" href="/pages/download">
                 <span class="desktop"><i class="fa fa-download"></i>Download Bolt</span>
                 <span class="mobile">View download options</span>
-                <span class="sub">{{ currentversion.title }}</span>
+                <span class="sub">Current version {{ latest_version() }}</span>
             </a>
             <a class="button trybolt" href="http://try.bolt.cm" title="Setup and start a Bolt-site within seconds on try.bolt.com!"> <i class="fa fa-hand-o-right"></i>Try Bolt now! </a>
 
