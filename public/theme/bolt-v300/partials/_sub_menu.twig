@@ -1,14 +1,6 @@
-{% macro display_menu_item(item, loop) %}
-    <li class="index-{{ loop.index }}{% if loop.first %} first{% endif %}{% if loop.last %} last{% endif %}{% if item|current %} active{% endif %}">
-        <a href="{{ item.link }}" {% if item.title is defined %}title='{{ item.title|escape }}'{% endif %}
-           class='{% if item.class is defined %}{{ item.class }}{% endif %}'>
-            {{ item.label }}
-        </a>
-    </li>
-{% endmacro %}
-
+{% use 'partials/_blocks.twig' %}
 {% for item in menu %}
     {% if item.label is defined %}
-        {{ _self.display_menu_item(item, loop) }}
+        {{ block('menu_item') }}
     {% endif %}
 {% endfor %}
