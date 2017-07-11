@@ -1,10 +1,10 @@
 <?php
 
-namespace Local\Simplestats\Tables;
+namespace Bolt\Site\Schema\Table;
 
 use Bolt\Storage\Database\Schema\Table\BaseTable;
 
-class LogTable extends BaseTable
+class SimpleStat extends BaseTable
 {
     /**
      * {@inheritdoc}
@@ -13,7 +13,7 @@ class LogTable extends BaseTable
     {
         $this->table->addColumn('id',           'integer',  ['autoincrement' => true]);
         $this->table->addColumn('timestamp',    'datetime', ['notnull' => true]);
-        $this->table->addColumn('ip',           'string',   ['length' => 32]);
+        $this->table->addColumn('ip',           'string',   ['length' => 48]);
         $this->table->addColumn('browseragent', 'string',   ['length' => 256, 'notnull' => false, 'default' => null]);
         $this->table->addColumn('route',        'string',   ['length' => 64, 'notnull' => false, 'default' => null]);
         $this->table->addColumn('uri',          'string',   ['length' => 256, 'notnull' => false, 'default' => null]);
