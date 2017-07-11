@@ -2,8 +2,11 @@
 
 namespace Bolt\Site;
 
+use Bolt\Extension\DatabaseSchemaTrait;
 use Bolt\Extension\SimpleExtension;
-use Bolt\Site\Twig;
+use Bolt\Extension\StorageTrait;
+use Bolt\Menu\MenuEntry;
+use Bolt\Site\Schema\Table;
 use Bolt\Twig\SecurityPolicy;
 use Silex\Application;
 use Twig\Environment;
@@ -16,11 +19,63 @@ use Twig\Extension\SandboxExtension;
  */
 class SiteExtension extends SimpleExtension
 {
+    use DatabaseSchemaTrait;
+    use StorageTrait;
+
+    /**
+     * {@inheritdoc}
+     */
+    protected function registerFrontendControllers()
+    {
+        return [
+            '/' => new Controller\StatCollector(),
+        ];
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    protected function registerBackendControllers()
+    {
+        return [
+            '/' => new Controller\SiteAdmin(),
+        ];
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    protected function registerMenuEntries()
+    {
+        $menu = new MenuEntry('SimpleStats-menu', 'simplestats');
+        $menu->setLabel('SimpleStats')
+            ->setIcon('fa:bar-chart')
+            ->setPermission('dashboard')
+        ;
+
+        return [
+            $menu,
+        ];
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    protected function registerTwigPaths()
+    {
+        return [
+            'templates' => ['namespace' => 'site'],
+        ];
+    }
+
     /**
      * {@inheritdoc}
      */
     protected function registerServices(Application $app)
     {
+        $this->extendDatabaseSchemaServices();
+        $this->extendRepositoryMapping();
+
         $app['twig.runtime.site'] = function ($app) {
             return new Twig\Extension\SiteRuntime($app['guzzle.client'], $app['cache']);
         };
@@ -50,5 +105,25 @@ class SiteExtension extends SimpleExtension
                 return $twig;
             }
         ));
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    protected function registerExtensionTables()
+    {
+        return [
+            'simplestats_log' => Table\SimpleStat::class,
+        ];
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    protected function registerRepositoryMappings()
+    {
+        return [
+            'simplestats_log' => [Entity\SimpleStat::class => Repository\SimpleStat::class],
+        ];
     }
 }
