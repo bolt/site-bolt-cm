@@ -8,22 +8,23 @@
     "packages": [
         {
             "name": "bolt/bolt",
-            "version": "v3.3.0-beta12",
+            "version": "v3.3.0-beta13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bolt/bolt.git",
-                "reference": "8790f66ac15d7fb7d1520c272868d7fa82fe7e2c"
+                "reference": "4bc110b73a9660b1e426d543c106e2e32c29a410"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bolt/bolt/zipball/8790f66ac15d7fb7d1520c272868d7fa82fe7e2c",
-                "reference": "8790f66ac15d7fb7d1520c272868d7fa82fe7e2c",
+                "url": "https://api.github.com/repos/bolt/bolt/zipball/4bc110b73a9660b1e426d543c106e2e32c29a410",
+                "reference": "4bc110b73a9660b1e426d543c106e2e32c29a410",
                 "shasum": ""
             },
             "require": {
                 "bolt/collection": "^1.0",
-                "bolt/filesystem": "^2.2",
+                "bolt/filesystem": "^2.3.1",
                 "bolt/pathogen": "~0.6",
+                "bolt/themes": "^1.0",
                 "bolt/thumbs": "^3.1.1",
                 "brandonwamboldt/utilphp": "^1.0",
                 "cocur/slugify": "^1.0",
@@ -131,7 +132,7 @@
                 "silex",
                 "symfony"
             ],
-            "time": "2017-06-22T09:02:09+00:00"
+            "time": "2017-07-14T09:37:41+00:00"
         },
         {
             "name": "bolt/collection",
@@ -176,16 +177,16 @@
         },
         {
             "name": "bolt/filesystem",
-            "version": "2.3.0",
+            "version": "2.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bolt/filesystem.git",
-                "reference": "cb46869466bc59e0a2b6e22482bb610d6d3d2b99"
+                "reference": "b60c5045c3944c3c8f6e3bee89dde2da1a6c282b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bolt/filesystem/zipball/cb46869466bc59e0a2b6e22482bb610d6d3d2b99",
-                "reference": "cb46869466bc59e0a2b6e22482bb610d6d3d2b99",
+                "url": "https://api.github.com/repos/bolt/filesystem/zipball/b60c5045c3944c3c8f6e3bee89dde2da1a6c282b",
+                "reference": "b60c5045c3944c3c8f6e3bee89dde2da1a6c282b",
                 "shasum": ""
             },
             "require": {
@@ -239,7 +240,7 @@
                 }
             ],
             "description": "Bolt's filesystem abstraction layer",
-            "time": "2017-06-04T06:08:09+00:00"
+            "time": "2017-07-14T07:05:31+00:00"
         },
         {
             "name": "bolt/pathogen",
@@ -294,6 +295,44 @@
                 "path"
             ],
             "time": "2017-06-10T08:28:12+00:00"
+        },
+        {
+            "name": "bolt/themes",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bolt/themes.git",
+                "reference": "614b1e1bbf369a128e78bb8c9b499dcfd86fab28"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bolt/themes/zipball/614b1e1bbf369a128e78bb8c9b499dcfd86fab28",
+                "reference": "614b1e1bbf369a128e78bb8c9b499dcfd86fab28",
+                "shasum": ""
+            },
+            "require": {
+                "twig/twig": "^1.32 || ^2.0"
+            },
+            "conflict": {
+                "bolt/bolt": "< 3.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Starter themes for Bolt",
+            "homepage": "http://bolt.cm",
+            "keywords": [
+                "cms",
+                "twig"
+            ],
+            "time": "2017-07-14T08:27:41+00:00"
         },
         {
             "name": "bolt/thumbs",
@@ -1238,7 +1277,7 @@
         },
         {
             "name": "embed/embed",
-            "version": "v3.0.9",
+            "version": "v3.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oscarotero/Embed.git",
