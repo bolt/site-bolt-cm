@@ -31,7 +31,7 @@
     "require": {
         "bobdenotter/seo": "^1.0",
         "bobdenotter/tweet-embed": "^1.0",
-        "bolt/boltforms": "^3.1@dev",
+        "bolt/boltforms": "^4.0@beta",
         "bolt/disqus": "^2.0",
         "bolt/file-browser": "^3.0@dev",
         "bolt/sitemap": "^2.0",
