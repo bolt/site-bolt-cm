@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "43671d8fe10e3e21e4da870cadd28712",
+    "content-hash": "3569737e152b3c05f9c0e1d864fd72b7",
     "packages": [
         {
             "name": "bobdenotter/seo",
@@ -102,16 +102,16 @@
         },
         {
             "name": "bolt/boltforms",
-            "version": "4.0.0-beta2",
+            "version": "v4.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bolt/boltforms.git",
-                "reference": "8d2169c112129f673f0346b7d338837264175116"
+                "reference": "9313d004a6370b6c4b0862dde24f86d1d86d9cd3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bolt/boltforms/zipball/8d2169c112129f673f0346b7d338837264175116",
-                "reference": "8d2169c112129f673f0346b7d338837264175116",
+                "url": "https://api.github.com/repos/bolt/boltforms/zipball/9313d004a6370b6c4b0862dde24f86d1d86d9cd3",
+                "reference": "9313d004a6370b6c4b0862dde24f86d1d86d9cd3",
                 "shasum": ""
             },
             "require": {
@@ -169,10 +169,10 @@
                 "uploads"
             ],
             "support": {
-                "source": "https://github.com/bolt/boltforms/tree/4.0",
+                "source": "https://github.com/bolt/boltforms/tree/4.1",
                 "issues": "https://github.com/bolt/boltforms/issues"
             },
-            "time": "2017-03-20T15:24:51+00:00"
+            "time": "2017-07-31T13:50:25+00:00"
         },
         {
             "name": "bolt/disqus",
@@ -325,7 +325,7 @@
                 "source": "https://github.com/GawainLynch/bolt-extension-file-browser/tree/master",
                 "issues": "https://github.com/GawainLynch/bolt-extension-file-browser/issues"
             },
-            "time": "2017-01-15 08:10:06"
+            "time": "2017-01-15T08:10:06+00:00"
         },
         {
             "name": "bolt/sitemap",
