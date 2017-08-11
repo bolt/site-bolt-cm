@@ -1,0 +1,16 @@
+{% extends "master.twig" %}
+
+{% block bodyclass %}body-record{% endblock %}
+
+{% block content %}
+    <section class="maininfo">
+        <div class="maincolumn ">
+            <article class="row">
+                <h1><a href="{{ record.link }}">{{ record.title }}</a></h1>
+                <div class="articlebody">
+                    {{ boltforms('showroom_submit') }}
+                </div>
+            </article>
+        </div>
+    </section>
+{% endblock content %}
