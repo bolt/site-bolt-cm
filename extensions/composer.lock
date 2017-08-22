@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "3569737e152b3c05f9c0e1d864fd72b7",
+    "content-hash": "a44fc3b681537438774adbddeabea4be",
     "packages": [
         {
             "name": "bobdenotter/seo",
@@ -493,7 +493,6 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "bolt/boltforms": 10,
         "bolt/file-browser": 20
     },
     "prefer-stable": true,
