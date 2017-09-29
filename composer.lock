@@ -4,26 +4,29 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "1d317ca67caab6efae5854971b29ed62",
+    "content-hash": "b8b96b2d3df77865866309a3b0837d0d",
     "packages": [
         {
             "name": "bolt/bolt",
-            "version": "3.3.x-dev",
+            "version": "3.4.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bolt/bolt.git",
-                "reference": "8e97fd8156b5a7b988091e75f6b913fa9dc3fdc1"
+                "reference": "d596d808b2ffc06cd09ddee250bb2119ce035015"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bolt/bolt/zipball/8e97fd8156b5a7b988091e75f6b913fa9dc3fdc1",
-                "reference": "8e97fd8156b5a7b988091e75f6b913fa9dc3fdc1",
+                "url": "https://api.github.com/repos/bolt/bolt/zipball/d596d808b2ffc06cd09ddee250bb2119ce035015",
+                "reference": "d596d808b2ffc06cd09ddee250bb2119ce035015",
                 "shasum": ""
             },
             "require": {
                 "bolt/collection": "^1.1",
+                "bolt/common": "^1.0",
                 "bolt/filesystem": "^2.3.1",
                 "bolt/pathogen": "~0.6",
+                "bolt/requirements": "^1.0@dev",
+                "bolt/session": "^1.0",
                 "bolt/themes": "^1.0",
                 "bolt/thumbs": "^3.1.1",
                 "brandonwamboldt/utilphp": "^1.0",
@@ -50,7 +53,7 @@
                 "nesbot/carbon": "^1.20",
                 "paragonie/random_compat": "^1.4",
                 "passwordlib/passwordlib": "^1.0@beta",
-                "php": "^5.5.9 || ^7.0, <7.2",
+                "php": "^5.5.9 || ^7.0",
                 "silex/silex": "^1.3",
                 "silex/web-profiler": "^1.0",
                 "siriusphp/upload": "^1.2",
@@ -82,7 +85,7 @@
                 "symfony/web-profiler-bundle": "^2.8",
                 "symfony/yaml": "^2.8",
                 "tdammers/htmlmaid": "~0.7",
-                "twig/twig": "^1.28",
+                "twig/twig": "^1.34.2",
                 "ua-parser/uap-php": "^3.4"
             },
             "conflict": {
@@ -90,19 +93,18 @@
             },
             "require-dev": {
                 "bolt/codingstyle": "^1.0",
-                "codeception/codeception": "^2.2",
+                "codeception/codeception": "^2.3.3",
                 "league/flysystem-memory": "^1.0",
-                "lstrojny/phpunit-function-mocker": "0.3.0",
-                "phpunit/dbunit": "^1.3",
-                "phpunit/php-code-coverage": "^2.0",
-                "phpunit/phpunit": "^4.8",
-                "predis/predis": "^1.1",
+                "lstrojny/phpunit-function-mocker": "^0.3 || ^0.4",
+                "phpunit/dbunit": "^1.3 || ^3.0",
+                "phpunit/php-code-coverage": "^2.0 || ^4.0",
+                "phpunit/phpunit": "^4.8 || ^5.7",
                 "psr/cache": "^1.0",
                 "psr/simple-cache": "^1.0",
                 "roave/security-advisories": "dev-master@dev",
                 "sebastian/phpcpd": "^2.0",
                 "sorien/silex-pimple-dumper": "^1.0",
-                "symfony/phpunit-bridge": "^2.8"
+                "symfony/phpunit-bridge": "^2.8 || ^3.3.2"
             },
             "bin": [
                 "app/nut"
@@ -110,7 +112,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-3.3": "3.3.x-dev"
+                    "dev-3.4": "3.4.x-dev"
                 }
             },
             "autoload": {
@@ -133,7 +135,7 @@
                 "silex",
                 "symfony"
             ],
-            "time": "2017-09-13T12:08:35+00:00"
+            "time": "2017-09-28T13:22:47+00:00"
         },
         {
             "name": "bolt/collection",
@@ -359,6 +361,120 @@
                 "path"
             ],
             "time": "2017-06-10T08:28:12+00:00"
+        },
+        {
+            "name": "bolt/requirements",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bolt/requirements.git",
+                "reference": "56bc6e0fdf55f9ce8b395e667481c6955e744d02"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bolt/requirements/zipball/56bc6e0fdf55f9ce8b395e667481c6955e744d02",
+                "reference": "56bc6e0fdf55f9ce8b395e667481c6955e744d02",
+                "shasum": ""
+            },
+            "require": {
+                "composer/ca-bundle": "^1.0",
+                "php": "^5.5.9 || ^7.0",
+                "symfony/requirements-checker": "^1.0"
+            },
+            "bin": [
+                "bin/bolt-requirements"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Bolt\\Requirement\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Gawain Lynch",
+                    "email": "gawain.lynch@gmail.com"
+                }
+            ],
+            "description": "Requirement definitions for Bolt projects.",
+            "keywords": [
+                "bolt",
+                "cms",
+                "configuration"
+            ],
+            "time": "2017-09-13T05:12:52+00:00"
+        },
+        {
+            "name": "bolt/session",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bolt/session.git",
+                "reference": "ab32c5438fb9b5c330cac832c3545ec5649705be"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bolt/session/zipball/ab32c5438fb9b5c330cac832c3545ec5649705be",
+                "reference": "ab32c5438fb9b5c330cac832c3545ec5649705be",
+                "shasum": ""
+            },
+            "require": {
+                "bolt/common": "^1.0",
+                "php": "^5.5 || ^7.0",
+                "symfony/event-dispatcher": "^2.8 || ^3.0",
+                "symfony/http-foundation": "^2.8 || ^3.0",
+                "symfony/http-kernel": "^2.8 || ^3.0",
+                "symfony/polyfill-php70": "^1.0"
+            },
+            "require-dev": {
+                "bolt/codingstyle": "^2.0@dev",
+                "bolt/filesystem": "^2.0",
+                "escapestudios/symfony2-coding-standard": "^3.0@dev",
+                "friendsofphp/php-cs-fixer": "^2.4",
+                "mikey179/vfsstream": "^1.6",
+                "phpunit/phpunit": "^4.8",
+                "predis/predis": "^1.1",
+                "silex/silex": "^1.3 || ^2.0",
+                "symfony/cache": "^3.3",
+                "symfony/filesystem": "^2.8 || ^3.0",
+                "symfony/phpunit-bridge": "^3.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Bolt\\Session\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Gawain Lynch",
+                    "email": "gawain.lynch@gmail.com"
+                },
+                {
+                    "name": "Carson Full",
+                    "email": "carsonfull@gmail.com"
+                }
+            ],
+            "description": "PHP session storage for Symfony's HTTP layer",
+            "time": "2017-08-04T07:47:33+00:00"
         },
         {
             "name": "bolt/themes",
@@ -822,22 +938,22 @@
         },
         {
             "name": "contao/imagine-svg",
-            "version": "0.1.4",
+            "version": "0.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/contao/imagine-svg.git",
-                "reference": "aa9d4d1847364cb9c2f589833ec63096de914cf2"
+                "reference": "edd20d1fc09f32a6bdd87e154063363e72b9d3f5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/contao/imagine-svg/zipball/aa9d4d1847364cb9c2f589833ec63096de914cf2",
-                "reference": "aa9d4d1847364cb9c2f589833ec63096de914cf2",
+                "url": "https://api.github.com/repos/contao/imagine-svg/zipball/edd20d1fc09f32a6bdd87e154063363e72b9d3f5",
+                "reference": "edd20d1fc09f32a6bdd87e154063363e72b9d3f5",
                 "shasum": ""
             },
             "require": {
                 "ext-dom": "*",
                 "imagine/imagine": "^0.6|^0.7",
-                "php": ">=5.5.0"
+                "php": "^5.5|^7.0"
             },
             "require-dev": {
                 "friendsofphp/php-cs-fixer": "^2.0",
@@ -867,7 +983,7 @@
                 }
             ],
             "description": "Contao Imagine SVG library",
-            "time": "2017-05-20T13:06:46+00:00"
+            "time": "2017-09-14T16:47:37+00:00"
         },
         {
             "name": "doctrine/annotations",
@@ -1347,16 +1463,16 @@
         },
         {
             "name": "embed/embed",
-            "version": "v3.2.0",
+            "version": "v3.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oscarotero/Embed.git",
-                "reference": "5f518153df7735726b9f43838bb59be27df76fe7"
+                "reference": "f951eb15872b05fef056f48442efef2dbb5d51ed"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oscarotero/Embed/zipball/5f518153df7735726b9f43838bb59be27df76fe7",
-                "reference": "5f518153df7735726b9f43838bb59be27df76fe7",
+                "url": "https://api.github.com/repos/oscarotero/Embed/zipball/f951eb15872b05fef056f48442efef2dbb5d51ed",
+                "reference": "f951eb15872b05fef056f48442efef2dbb5d51ed",
                 "shasum": ""
             },
             "require": {
@@ -1396,7 +1512,7 @@
                 "opengraph",
                 "twitter cards"
             ],
-            "time": "2017-08-01T18:23:02+00:00"
+            "time": "2017-09-25T20:57:58+00:00"
         },
         {
             "name": "erusev/parsedown",
@@ -4366,6 +4482,54 @@
             "time": "2017-07-03T08:04:30+00:00"
         },
         {
+            "name": "symfony/requirements-checker",
+            "version": "v1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/requirements-checker.git",
+                "reference": "95a542d4b17b4b28942762bcefe90e9dec8cba59"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/requirements-checker/zipball/95a542d4b17b4b28942762bcefe90e9dec8cba59",
+                "reference": "95a542d4b17b4b28942762bcefe90e9dec8cba59",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.9"
+            },
+            "bin": [
+                "bin/requirements-checker"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Requirements\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                }
+            ],
+            "description": "Check Symfony requirements and give recommendations",
+            "keywords": [
+                "configuration",
+                "distribution"
+            ],
+            "time": "2017-07-19T10:04:23+00:00"
+        },
+        {
             "name": "symfony/routing",
             "version": "v2.8.27",
             "source": {
@@ -5071,16 +5235,16 @@
         },
         {
             "name": "twig/twig",
-            "version": "v1.34.4",
+            "version": "v1.35.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "f878bab48edb66ad9c6ed626bf817f60c6c096ee"
+                "reference": "daa657073e55b0a78cce8fdd22682fddecc6385f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/f878bab48edb66ad9c6ed626bf817f60c6c096ee",
-                "reference": "f878bab48edb66ad9c6ed626bf817f60c6c096ee",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/daa657073e55b0a78cce8fdd22682fddecc6385f",
+                "reference": "daa657073e55b0a78cce8fdd22682fddecc6385f",
                 "shasum": ""
             },
             "require": {
@@ -5094,7 +5258,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.34-dev"
+                    "dev-master": "1.35-dev"
                 }
             },
             "autoload": {
@@ -5132,7 +5296,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2017-07-04T13:19:31+00:00"
+            "time": "2017-09-27T18:06:46+00:00"
         },
         {
             "name": "ua-parser/uap-php",
