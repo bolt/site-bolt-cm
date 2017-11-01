@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "a44fc3b681537438774adbddeabea4be",
+    "content-hash": "da203c3d0d1a04bc950d99552a468cba",
     "packages": [
         {
             "name": "bobdenotter/seo",
-            "version": "1.0.3",
+            "version": "1.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bobdenotter/seo.git",
-                "reference": "d16bc52d5647696454063b37e92febab1327f5d4"
+                "reference": "96918c2c7fcfd01aaa01ba14480fd639dba3ba37"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bobdenotter/seo/zipball/d16bc52d5647696454063b37e92febab1327f5d4",
-                "reference": "d16bc52d5647696454063b37e92febab1327f5d4",
+                "url": "https://api.github.com/repos/bobdenotter/seo/zipball/96918c2c7fcfd01aaa01ba14480fd639dba3ba37",
+                "reference": "96918c2c7fcfd01aaa01ba14480fd639dba3ba37",
                 "shasum": ""
             },
             "require": {
@@ -44,10 +44,10 @@
             ],
             "description": "An extension to easily manage SEO title, meta description and OG tags.",
             "support": {
-                "source": "https://github.com/bobdenotter/seo/tree/1.0.3",
+                "source": "https://github.com/bobdenotter/seo/tree/1.0.5",
                 "issues": "https://github.com/bobdenotter/seo/issues"
             },
-            "time": "2017-07-04T09:49:10+00:00"
+            "time": "2017-09-13T13:36:11+00:00"
         },
         {
             "name": "bobdenotter/tweet-embed",
@@ -102,16 +102,16 @@
         },
         {
             "name": "bolt/boltforms",
-            "version": "v4.1.1",
+            "version": "v4.1.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bolt/boltforms.git",
-                "reference": "9313d004a6370b6c4b0862dde24f86d1d86d9cd3"
+                "reference": "6bac1b9cca85f30f47ed177de33c1b7d11d6b79c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bolt/boltforms/zipball/9313d004a6370b6c4b0862dde24f86d1d86d9cd3",
-                "reference": "9313d004a6370b6c4b0862dde24f86d1d86d9cd3",
+                "url": "https://api.github.com/repos/bolt/boltforms/zipball/6bac1b9cca85f30f47ed177de33c1b7d11d6b79c",
+                "reference": "6bac1b9cca85f30f47ed177de33c1b7d11d6b79c",
                 "shasum": ""
             },
             "require": {
@@ -172,7 +172,7 @@
                 "source": "https://github.com/bolt/boltforms/tree/4.1",
                 "issues": "https://github.com/bolt/boltforms/issues"
             },
-            "time": "2017-07-31T13:50:25+00:00"
+            "time": "2017-10-18T15:19:49+00:00"
         },
         {
             "name": "bolt/disqus",
