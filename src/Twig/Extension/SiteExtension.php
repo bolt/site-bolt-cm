@@ -19,6 +19,7 @@ class SiteExtension extends AbstractExtension
     {
         return [
             new TwigFunction('latest_version', [SiteRuntime::class, 'getLatestVersion']),
+            new TwigFunction('changelog_link', [SiteRuntime::class, 'getChangeLogLink']),
         ];
     }
 }

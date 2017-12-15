@@ -4,6 +4,7 @@ namespace Bolt\Site\Twig\Extension;
 
 use Doctrine\Common\Cache\CacheProvider;
 use GuzzleHttp\Client;
+use Twig\Markup;
 
 /**
  * Bolt.cm Twig run-time extension.
@@ -47,5 +48,14 @@ class SiteRuntime
         }
 
         return $version;
+    }
+
+    public function getChangeLogLink()
+    {
+        return new Markup(sprintf(
+            '<a href="https://github.com/bolt/bolt/blob/v%s/changelog.md" ' .
+            'title="The releasenotes on GitHub">View the release notes in the Changelog</a>',
+            $this->getLatestVersion()
+        ), 'UTF-8');
     }
 }

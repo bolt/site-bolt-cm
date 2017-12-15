@@ -100,6 +100,7 @@ class SiteExtension extends SimpleExtension
                 $policy = $sandbox->getSecurityPolicy();
                 if ($policy instanceof SecurityPolicy) {
                     $policy->addAllowedFunction('latest_version');
+                    $policy->addAllowedFunction('changelog_link');
                 }
 
                 return $twig;
